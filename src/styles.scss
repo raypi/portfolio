@@ -3,45 +3,12 @@
     --backgroundColor:#FFFCF3;
 
     --headerHeight: 80px;
+    --footerHeight: 80px;
    
 
     --boxShadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-@media (min-width: 1920px) {
-    .header-content {
-      width: 1920px;
-    }
-    .content-main {
-      width: 1920px;
-    }
-    .footer-content {
-      width: 1920px;
-    }
-  }
   
-  @media (min-width: 1440px) and (max-width: 1919px) {
-    .header-content {
-      width: 1440px;
-    }
-    .content-main {
-      width: 1440px;
-    }
-    .footer-content {
-      width: 1440px;
-    }    
-  }
-  
-  @media (min-width: 900px) and (max-width: 1439px) {
-    .header-content {
-      width: 900px;
-    }
-    .content-main {
-      width: 900px;
-    }
-    .footer-content {
-      width: 900px;
-    }  
-  }
   
 //   @font-face {
 //     font-family: 'Sixtyfour';
@@ -59,12 +26,7 @@
     height: 100vh;
   }
   
-  main {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+ 
   
   body {
     margin: 0;
@@ -151,32 +113,76 @@
     }
   }
   
-  
-  .main-contend {
+  .main {
     flex: 1;
-    padding: var(--paddingMedium);
-    background-color: var(--backgroundColorGray);
     display: flex;
     justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+  
+  
+  .main-content {
+    width: 100%;
   }
   
-  footer {
-    background-color: var(--backgroundColorOrange);
+  @media (min-width: 1920px) {
+    .main-content {
+      width: 1920px;
+    }
+  }
+  
+  @media (min-width: 1440px) and (max-width: 1919px) {
+    .main-content {
+      width: 1440px;
+    }
+  }
+  
+  @media (min-width: 900px) and (max-width: 1439px) {
+    .main-content {
+      width: 900px;
+    }
+  }
+}
+ 
+
+footer {
+    background-color: var(--backgroundColor); // oder var(--backgroundColor), je nach gewünschtem Design
     width: 100%;
-    height: var(--footerHeight);
+    height: var(--footerHeight); // Nutzt den global definierten Wert
     display: flex;
     justify-content: center;
     text-align: center;
-    line-height: var(--headerHeight);
-    font-size: var(--fontSizeMedium);
+  
+    .footer-content {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; // Kann je nach Bedarf z.B. auch space-between sein
+      padding: 0 8px; // Optional: Abstand zum Rand
+    }
+  
+    @media (min-width: 1920px) {
+      .footer-content {
+        width: 1920px;
+      }
+    }
+  
+    @media (min-width: 1440px) and (max-width: 1919px) {
+      .footer-content {
+        width: 1440px;
+      }
+    }
+  
+    @media (min-width: 900px) and (max-width: 1439px) {
+      .footer-content {
+        width: 900px;
+      }
+    }
   }
   
-  .footer-content {
-    display: flex;
-    justify-content: center;
-    height: var(--footerHeight);
-    align-items: center;
-  }
+  
+
 
 
 // @media (min-width: 1920px) {
