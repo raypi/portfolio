@@ -1,1 +1,38 @@
-<p>my-skills section</p>
+<!-- <div class="my-skills">
+    <div class="skills-container">
+      <h2>My Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item" *ngFor="let skill of skills">
+          <img [src]="skill.image" [alt]="skill.name">
+          <span>{{ skill.name }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="skills-arrow">
+      <img src="assets/img/arrowdownrightsmal.png" alt="Arrow">
+    </div>
+  </div>
+   -->
+   <div class="my-skills">
+    <div class="skills-container">
+      <h2>My Skills</h2>
+      <div class="skills-grid">
+        <div class="skills-row">
+          <div class="skill-item" *ngFor="let skill of skills | slice:0:5">
+            <img [src]="skill.image" [alt]="skill.name">
+            <span>{{ skill.name }}</span>
+          </div>
+        </div>
+        <div class="skills-row">
+          <div class="skill-item" *ngFor="let skill of skills | slice:5:10">
+            <img [src]="skill.image" [alt]="skill.name">
+            <span>{{ skill.name }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="skills-arrow">
+      <img src="assets/img/arrowdownrightsmal.png" alt="Arrow">
+    </div>
+  </div>
+  
