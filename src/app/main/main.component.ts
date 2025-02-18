@@ -9,14 +9,7 @@ import { SayHiComponent } from './say-hi/say-hi.component';
   selector: 'app-main',
   standalone: true,
   imports: [HeroComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, SayHiComponent],
-  template: `
-    <app-hero></app-hero>
-    <app-about-me></app-about-me>
-    <app-my-skills></app-my-skills>
-    <app-portfolio></app-portfolio>
-    <app-say-hi></app-say-hi>
-  `,
-
+  templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
 export class MainComponent {
