@@ -1,1 +1,23 @@
-<p>portfolio section</p>
+<div class="portfolio">
+    <h2>Portfolio</h2>
+    <p class="portfolio-description">
+      Explore a Selection of my work here - Interact with projects to see my skills in action.
+    </p>
+    <div class="portfolio-table">
+      <div class="portfolio-row" *ngFor="let project of myProjekts; let i = index" [ngClass]="{'reverse': i % 2 !== 0}">
+        <div class="portfolio-col image-col">
+          <img [src]="project.img" [alt]="project.projekt">
+        </div>
+        <div class="portfolio-col info-col">
+          <h3>{{ project.projekt }}</h3>
+          <p class="skills">{{ project.skills.join(' | ') }}</p>
+          <p class="description">{{ project.projectDescription }}</p>
+          <button (click)="openLink(project.links.github)">GitHub</button>
+        </div>
+      </div>
+    </div>
+    <div class="skills-arrow">
+        <img src="assets/img/arrowleftdown.png" alt="Next Section Arrow">
+      </div>
+  </div>
+  
