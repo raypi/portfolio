@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-say-hi',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule,CommonModule],
   templateUrl: './say-hi.component.html',
   styleUrl: './say-hi.component.scss'
 })

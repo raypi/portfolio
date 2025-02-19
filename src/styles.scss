@@ -3,7 +3,7 @@
     --backgroundColor:#FFFCF3;
 
     --headerHeight: 80px;
-    --footerHeight: 80px;
+    --footerHeight: 100px;
    
 
     --boxShadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -118,6 +118,7 @@
     flex: 1;
     margin-top: 80px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--backgroundColor);

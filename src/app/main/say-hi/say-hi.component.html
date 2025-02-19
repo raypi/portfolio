@@ -1,5 +1,5 @@
 <div class="say-hi-section">
-    <div class="say-hi-content">
+    <div class="say-hi-inner">
       <h2>Say Hi!</h2>
       <div class="contact-form">
         <h3>Want to discuss a new project?</h3>
@@ -15,7 +15,7 @@
             [(ngModel)]="name"
             (blur)="validateName()"
           />
-          <!-- Bild: Zeige bei Fehler das rote Icon, bei gültiger Eingabe das grüne -->
+          <!-- Zeige bei Fehler das rote Icon, bei gültiger Eingabe das grüne -->
           <img
             *ngIf="nameError"
             src="assets/img/contactincorrect.png"
@@ -75,7 +75,7 @@
             [(ngModel)]="privacyAccepted"
           />
           <label for="privacy">
-            Ive read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.
+            I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.
           </label>
         </div>
   
@@ -85,5 +85,4 @@
         </button>
       </div>
     </div>
-  </div>
-  
+  </div>  
