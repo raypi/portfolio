@@ -1,1 +1,89 @@
-<p>say-hi section</p>
+<div class="say-hi-section">
+    <div class="say-hi-content">
+      <h2>Say Hi!</h2>
+      <div class="contact-form">
+        <h3>Want to discuss a new project?</h3>
+        <p class="form-description">
+          Sah hallo! Let’s discuss your ideas and make it happen
+        </p>
+  
+        <!-- Name Input -->
+        <div class="input-group">
+          <input
+            type="text"
+            placeholder="Your name..."
+            [(ngModel)]="name"
+            (blur)="validateName()"
+          />
+          <!-- Bild: Zeige bei Fehler das rote Icon, bei gültiger Eingabe das grüne -->
+          <img
+            *ngIf="nameError"
+            src="assets/img/contactincorrect.png"
+            alt="Error"
+          />
+          <img
+            *ngIf="!nameError && name"
+            src="assets/img/contactcorrct.png"
+            alt="Correct"
+          />
+        </div>
+        <div class="error-message" *ngIf="nameError">
+          Your name is required
+        </div>
+  
+        <!-- Email Input -->
+        <div class="input-group">
+          <input
+            type="email"
+            placeholder="Your email..."
+            [(ngModel)]="email"
+            (blur)="validateEmail()"
+          />
+          <img
+            *ngIf="emailError"
+            src="assets/img/contactincorrect.png"
+            alt="Error"
+          />
+          <img
+            *ngIf="!emailError && email"
+            src="assets/img/contactcorrct.png"
+            alt="Correct"
+          />
+        </div>
+        <div class="error-message" *ngIf="emailError">
+          Your email is required
+        </div>
+  
+        <!-- Message Textarea -->
+        <div class="input-group">
+          <textarea
+            placeholder="Your Message..."
+            maxlength="300"
+            [(ngModel)]="message"
+            (blur)="validateMessage()"
+          ></textarea>
+        </div>
+        <div class="error-message" *ngIf="messageError">
+          Your Message is empty
+        </div>
+  
+        <!-- Checkbox -->
+        <div class="checkbox-group">
+          <input
+            type="checkbox"
+            id="privacy"
+            [(ngModel)]="privacyAccepted"
+          />
+          <label for="privacy">
+            Ive read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.
+          </label>
+        </div>
+  
+        <!-- Send Message Button -->
+        <button [disabled]="!isFormValid()" (click)="sendMessage()">
+          Send Message
+        </button>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,123 @@
+/* Der äußere Container erstreckt sich über die ganze Seite und hat einen schwarzen Hintergrund 
+   mit einer schrägen Unterkante, bei der die linke Seite 200px höher ist als die rechte. */
+   .say-hi-section {
+    position: relative;
+    width: 100%;
+    background-color: black;
+    /* Clip-Path: links oben bei (0,0), rechts oben bei (100%,200px),
+       rechts unten bei (100%,100%), links unten bei (0,100%). */
+    clip-path: polygon(0 0, 100% 200px, 100% 100%, 0 100%);
+    overflow: hidden;
+    padding-bottom: 40px; // extra Platz am unteren Rand
+  }
+  
+  /* Der Content wird zentriert und bekommt einen hellen Abstand */
+  .say-hi-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    color: white;
+  
+    h2 {
+      text-align: left;
+      margin: 0 0 20px;
+    }
+  }
+  
+  /* Kontaktformular */
+  .contact-form {
+    text-align: center;
+  
+    h3 {
+      color: green;
+      margin-bottom: 10px;
+    }
+  
+    .form-description {
+      margin: 0 auto 20px;
+      display: inline-block;
+    }
+  
+    /* Gruppe für Input-Felder und Textarea */
+    .input-group {
+      position: relative;
+      margin: 10px auto;
+      width: 350px;
+  
+      input,
+      textarea {
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid white;
+        color: white;
+        padding: 5px;
+        font-size: 1rem;
+      }
+  
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border: 2px solid white;
+      }
+  
+      /* Icon rechts neben dem Input */
+      img {
+        position: absolute;
+        right: -40px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+      }
+    }
+  
+    .error-message {
+      color: red;
+      font-size: 0.8rem;
+      margin-top: 5px;
+      text-align: left;
+      width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    /* Checkbox-Gruppe */
+    .checkbox-group {
+      margin: 20px auto;
+      width: 350px;
+      text-align: left;
+      font-size: 0.9rem;
+  
+      input[type="checkbox"] {
+        margin-right: 10px;
+      }
+  
+      a {
+        font-style: italic;
+        color: white;
+        text-decoration: underline;
+      }
+    }
+  
+    /* Send Message Button */
+    button {
+      border: 2px solid gray;
+      padding: 8px 32px;
+      background: transparent;
+      color: gray;
+      cursor: not-allowed;
+      font-weight: bold;
+      transition: all 0.3s;
+      margin-top: 20px;
+    }
+  
+    button:enabled {
+      border: 2px solid white;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  
