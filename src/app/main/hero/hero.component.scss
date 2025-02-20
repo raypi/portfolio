@@ -1,79 +1,109 @@
 .hero {
-    position: relative; // Für die absolute Positionierung der E-Mail
+  position: relative; // Für die absolute Positionierung der E-Mail
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+
+  .hero-title h1 {
+    margin: 0;
+    line-height: 1.2;
+    font-size: 6rem; 
+  }
+
+  .hero-subtitle {
+    margin-top: 20px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-  
-   
-    .hero-title h1 {
-      margin: 0;
-      line-height: 1.2;
-      font-size: 6rem; 
-    }
-  
-    
-    .hero-subtitle {
-      margin-top: 20px;
-      width: 100%;
+    justify-content: center;
+
+    .line-with-name {
       display: flex;
-      justify-content: center;
-  
-      .line-with-name {
-        display: flex;
-        width: 50%;
-        justify-content: flex-start;
-  
-        .line {
-          flex: 1;
-          height: 1px;
-          background-color: black;
-          margin-right: 8px;
-          margin-top: 12px;
-        }
-  
-        .name {
-          font-size: 1.5rem;
-        }
+      width: 50%;
+      justify-content: flex-start;
+
+      .line {
+        flex: 1;
+        height: 1px;
+        background-color: black;
+        margin-right: 8px;
+        margin-top: 12px;
       }
-    }
-  
-    
-    .hero-footer {
-      margin-top: 30px;
-      width: 100%;
-      position: relative; // Damit der absolute Inhalt der E-Mail sich am .hero orientiert
-      display: flex;
-      justify-content: flex-end; // Damit der Scroll-Bereich rechts bleibt
-      align-items: center;
-      padding: 0 20px;
-  
-      
-      .hero-email {
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translate(-100%, -50%) rotate(-90deg);
-        white-space: nowrap;
-        font-size: 1rem;
-      }
-  
-      
-      .hero-scroll {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-  
-        img {
-          max-width: 50px;
-        }
-  
-        .scroll-text {
-          margin-top: 5px;
-          font-size: 0.9rem;
-        }
+
+      .name {
+        font-size: 1.5rem;
       }
     }
   }
-  
+
+  .hero-footer {
+    margin-top: 30px;
+    width: 100%;
+    position: relative; // Damit der absolute Inhalt der E-Mail sich am .hero orientiert
+    display: flex;
+    justify-content: flex-end; // Damit der Scroll-Bereich rechts bleibt
+    align-items: center;
+    padding: 0 20px;
+
+    .hero-email {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(-100%, -50%) rotate(-90deg);
+      white-space: nowrap;
+      font-size: 1rem;
+    }
+
+    .hero-scroll {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        max-width: 50px;
+      }
+
+      .scroll-text {
+        margin-top: 5px;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+// Responsive Anpassungen für Telefonmodus
+@media (max-width: 768px) {  
+.hero {
+  padding: 15px;
+
+  .hero-title h1 {
+    font-size: 3.5rem; // Kleinere H1 für Mobilansicht
+  }
+
+  .hero-subtitle {
+    .line-with-name {
+      width: 80%; // Größere Breite, damit die Linie nicht zu kurz wird
+      justify-content: center;
+
+      .line {
+        flex: 2; // Längere Linie für bessere Optik
+      }
+
+      .name {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .hero-footer {
+    .hero-email {
+      font-size: 0.9rem;
+    }
+
+    .hero-scroll img {
+      max-width: 40px; // Kleineres Scroll-Icon
+    }
+  }
+}
+}
