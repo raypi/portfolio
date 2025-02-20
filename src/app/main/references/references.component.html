@@ -1,1 +1,19 @@
-<p>references works!</p>
+<div class="references">
+    <h2>Referenzen</h2>
+    <p class="intro">
+      I thrive both independently and as Part of a Team. Here's what my colleagues have to say about working with me.
+    </p>
+    <div class="references-list">
+      <div class="reference-item" *ngFor="let ref of references">
+        <div class="quote-symbol">"</div>
+        <div class="ref-info">
+          <div class="ref-name">{{ ref.name }}</div>
+          <div class="ref-title">{{ ref.title }}</div>
+        </div>
+        <div class="ref-text">
+          {{ ref.reference }}
+        </div>
+      </div>
+    </div>
+  </div>
+  
