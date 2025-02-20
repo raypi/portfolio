@@ -1,93 +1,131 @@
 .about-me {
-    padding: 20px;
-    position: relative;
+  padding: 20px;
+  position: relative;
+  
+  .about-me-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     
-    .about-me-content {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    // Linke Spalte: 2/3 der Breite
+    .about-me-left {
+      flex: 2;
+      padding-right: 20px;
       
-      /* Linke Spalte: 2/3 der Breite */
-      .about-me-left {
-        flex: 2;
-        padding-right: 20px;
+      h2 {
+        margin-bottom: 16px;
+        font-size: 2rem;
+      }
+      
+      p {
+        line-height: 1.5;
+        margin-bottom: 24px;
+        font-size: 1rem;
+      }
+      
+      // Info-Bereich mit den Grafiken
+      .about-me-info {
+        margin-bottom: 24px;
         
-        h2 {
-          margin-bottom: 16px;
-          font-size: 2rem;
-        }
-        
-        p {
-          line-height: 1.5;
-          margin-bottom: 24px;
-          font-size: 1rem;
-        }
-        
-        /* Info-Bereich mit den zwei Grafiken */
-        .about-me-info {
-          margin-bottom: 24px;
+        .info-item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 8px;
           
-          .info-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 8px;
-            
-            &:last-child {
-              margin-bottom: 0;
-            }
-            
-            img {
-              width: 16px;
-              height: 16px;
-              margin-right: 8px;
-            }
-            
-            span {
-              font-size: 0.9rem;
-            }
+          &:last-child {
+            margin-bottom: 0;
           }
-        }
-        
-        /* Zentrierter Button */
-        .talk-button {
-          border: 2px solid black;
-          padding: 8px 32px;
-          background: transparent;
-          cursor: pointer;
-          font-weight: bold;
-          display: block;
-          margin: 0 auto;
-          transition: background-color 0.3s;
           
-          &:hover {
-            background-color: rgba(0, 0, 0, 0.05);
+          img {
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+          }
+          
+          span {
+            font-size: 0.9rem;
           }
         }
       }
       
-      /* Rechte Spalte: 1/3 der Breite */
-      .about-me-right {
-        flex: 1;
-        text-align: right;
+      // Zentrierter Button
+      .talk-button {
+        border: 2px solid black;
+        padding: 8px 32px;
+        background: transparent;
+        cursor: pointer;
+        font-weight: bold;
+        display: block;
+        margin: 0 auto;
+        transition: background-color 0.3s;
         
-        img {
-          width: 100%;
-          height: auto;
-          object-fit: cover;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.05);
         }
       }
     }
     
-    /* Pfeil unterhalb, rechtsbündig */
-    .about-me-arrow {
-      margin-top: 20px;
-      margin-right: 400px;
+    // Rechte Spalte: 1/3 der Breite
+    .about-me-right {
+      flex: 1;
       text-align: right;
       
       img {
-        width: 50px;
+        width: 100%;
         height: auto;
+        object-fit: cover;
       }
     }
   }
   
+  // Pfeil unterhalb, rechtsbündig
+  .about-me-arrow {
+    margin-top: 20px;
+    margin-right: 400px;
+    text-align: right;
+    
+    img {
+      width: 50px;
+      height: auto;
+    }
+  }
+}
+
+// Responsive Anpassungen: Ab iPad (max-width: 1024px) wird die about-me-content in eine Spalte verwandelt,
+// der Inhalt (Text und Button) wird zentriert und das Bild erhält feste Maße (200px x 300px)
+@media (max-width: 1024px) {
+  .about-me {
+    .about-me-content {
+      flex-direction: column;
+      align-items: center;
+      
+      .about-me-left {
+        padding-right: 0;
+        text-align: center; // Text wird zentriert wie der Button
+        .about-me-description {
+          text-align: left;
+        }
+      }
+      
+      .about-me-right {
+        text-align: center;
+        margin-top: 20px;
+        
+        img {
+          width: 200px;
+          height: 300px;
+          object-fit: cover;
+        }
+
+        .about-me-description {
+          text-align: left;
+        }
+      }
+    }
+    
+    .about-me-arrow {
+      margin-right: 0;
+      text-align: center;
+    }
+  }
+}
