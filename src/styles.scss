@@ -1,228 +1,199 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Styles & Variablen */
 :root {
-    --backgroundColor:#FFFCF3;
-
-    --headerHeight: 80px;
-    --footerHeight: 100px;
-   
-
-    --boxShadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --backgroundColor: #FFFCF3;
+  --headerHeight: 80px;
+  --footerHeight: 100px;
+  --boxShadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-  
-  
-//   @font-face {
-//     font-family: 'Sixtyfour';
-//     src: url('assets/fonts/Sixtyfour/Sixtyfour-Regular-VariableFont_BLED,SCAN.ttf') format('truetype');
-//     font-weight: normal;
-//     font-style: normal;
-//   }
-  
-  h1 {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    font-size: 64px;
-  }
-  
-  html {
-    height: 100vh;
-  }
-  
- 
-  
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Sixtyfour', sans-serif;
-    background-color: var(--backgroundColor);
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100vw;
-  }
-  
-  .game-container {
-    position: relative;
-    width: 720px;
-    height: 480px;
-    margin: auto;
-    border-radius: 20px;
-    overflow: hidden;
-    background-color: var(--backgroundColorGray);
-  }
-  
-  #canvas {
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-color: var(--backgroundColorOrange);
-    border-radius: 16px;
-  }
-  
-  .content {
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* Füllt die Höhe des Body */
-    width: 100%;
-    font-family: 'Sixtyfour', sans-serif;
-  }
-  
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: var(--backgroundColor);
-    width: 100%;
-    height: var(--headerHeight); // Nutzt den global definierten Wert
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    z-index: 1000;
-  
-    .header-content {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between; // Anpassen: space-between aus header-spezifisch
-      padding: 0 8px; // Optional: Abstand zum Rand
-    }
 
-    @media (min-width: 1920px) {
-        .header-content {
-        width: 1920px;
-         }
-        }  
+/* Basis-Reset und Standardstile */
+h1 {
+  margin: 0;
+  font-size: 64px;
+}
 
-    @media (min-width: 1440px) and (max-width: 1919px) {
-        .header-content {
-          width: 1440px;
-        }
-      }
-      @media (min-width: 900px) and (max-width: 1439px) {
-        .header-content {
-        width: 900px;
-        }
-    }         
-  
-    svg {
-      display: block;
-    }
-  
-    img {
-      display: block;
-      cursor: pointer;
-    }
-  }
-  
-  .main {
-    flex: 1;
-    margin-top: 80px;
+html {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Sixtyfour', sans-serif;
+  background-color: var(--backgroundColor);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100vw;
+}/* Global Styles & Variablen */
+:root {
+  --backgroundColor: #FFFCF3;
+  --headerHeight: 80px;
+  --footerHeight: 100px;
+  --boxShadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Basis-Reset und Standardstile */
+h1 {
+  margin: 0;
+  font-size: 64px;
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Sixtyfour', sans-serif;
+  background-color: var(--backgroundColor);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100vw;
+}
+
+/* Beispiel für einen Game Container */
+.game-container {
+  position: relative;
+  width: 720px;
+  height: 480px;
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: var(--backgroundColorGray);
+}
+
+#canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: var(--backgroundColorOrange);
+  border-radius: 16px;
+}
+
+/* Content Wrapper */
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--backgroundColor);
+  width: 100%;
+  height: var(--headerHeight);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  z-index: 1000;
+
+  .header-content {
+    height: 100%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background-color: var(--backgroundColor);
-  
-  
+    justify-content: space-between;
+    padding: 0 8px;
+  }
+
+  /* Media Queries für größere Geräte */
+  @media (min-width: 900px) {
+    .header-content {
+      width: 900px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .header-content {
+      width: 1440px;
+    }
+  }
+  @media (min-width: 1920px) {
+    .header-content {
+      width: 1920px;
+    }
+  }
+
+  svg {
+    display: block;
+  }
+
+  img {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  margin-top: var(--headerHeight);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--backgroundColor);
+
   .main-content {
     width: 100%;
   }
-  
+
+  /* Media Queries für Main-Content */
+  @media (min-width: 900px) {
+    .main-content {
+      width: 900px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .main-content {
+      width: 1440px;
+    }
+  }
   @media (min-width: 1920px) {
     .main-content {
       width: 1920px;
     }
   }
-  
-  @media (min-width: 1440px) and (max-width: 1919px) {
-    .main-content {
-      width: 1440px;
-    }
+}
+
+/* Footer */
+footer {
+  background-color: var(--backgroundColor);
+  width: 100%;
+  height: var(--footerHeight);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  .footer-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
   }
-  
-  @media (min-width: 900px) and (max-width: 1439px) {
-    .main-content {
+
+  /* Media Queries für Footer-Content */
+  @media (min-width: 900px) {
+    .footer-content {
       width: 900px;
     }
   }
-}
- 
-
-footer {
-    background-color: var(--backgroundColor); // oder var(--backgroundColor), je nach gewünschtem Design
-    width: 100%;
-    height: var(--footerHeight); // Nutzt den global definierten Wert
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  
+  @media (min-width: 1440px) {
     .footer-content {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center; // Kann je nach Bedarf z.B. auch space-between sein
-      padding: 0 8px; // Optional: Abstand zum Rand
-    }
-  
-    @media (min-width: 1920px) {
-      .footer-content {
-        width: 1920px;
-      }
-    }
-  
-    @media (min-width: 1440px) and (max-width: 1919px) {
-      .footer-content {
-        width: 1440px;
-      }
-    }
-  
-    @media (min-width: 900px) and (max-width: 1439px) {
-      .footer-content {
-        width: 900px;
-      }
+      width: 1440px;
     }
   }
-  
-  
-
-
-
-// @media (min-width: 1920px) {
-//     .header-content {
-//         width: 1920px;
-//     }
-//     .content-main {
-//         width: 1920px;
-//     }
-
-//     .footer-content{
-//         width: 1920px;
-//     }
-// }
-
-
-// @media (min-width: 1440px) and (max-width: 1919px) {
-//     .header-content {
-//         width: 1440px;
-//     }
-//     .content-main {
-//         width: 1440px;
-//     }
-//     .footer-content{
-//         width: 1440px;
-//     }    
-// }
-
-// @media (min-width: 900px) and (max-width: 1439px) {
-//     .header-content {
-//         width: 900px;
-//     }
-//     .content-main {
-//         width: 900px;
-//     }
-//     .footer-content{
-//         width: 900px;
-//     }  
-// }
-  
+  @media (min-width: 1920px) {
+    .footer-content {
+      width: 1920px;
+    }
+  }
+}
