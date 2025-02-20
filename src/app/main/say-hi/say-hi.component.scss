@@ -111,3 +111,43 @@
       cursor: pointer;
     }
   }  
+
+  @media (min-width: 768px) and (max-width: 819px) {
+    .say-hi-section {
+      .say-hi-inner {
+        .contact-form {
+          .input-group {
+            input,
+            textarea {
+              width: 300px;
+              margin: 0 auto; /* Zentriert innerhalb des Containers */
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  
+  @media (min-width: 318px) and (max-width: 767px) {
+    .say-hi-section {
+      .say-hi-inner {
+        .contact-form {
+          .input-group {
+            width: 200px;
+            input{
+              width: 180px;
+            }
+            textarea {
+              width: 180px;
+              height: 120px;
+            }
+          }
+          .checkbox-group {
+            width: 200px;
+            margin: 0 auto; // zentriert die Checkbox-Group innerhalb des contact-form
+          }
+        }
+      }
+    }
+  }

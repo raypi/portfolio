@@ -82,5 +82,30 @@
           height: auto;
         }
       }
+    
   }
+
+  @media (max-width: 899px) {
+    .portfolio {
+      padding: 0 40px;
+      .portfolio-row {
+        flex-direction: column !important; /* Überschreibt auch reverse */
+        align-items: center;
+  
+        .portfolio-col {
+          padding: 10px 0;
+        }
+  
+        .image-col {
+          max-width: 490px;
+          width: auto;
+        }
+  
+        .info-col {
+          order: 2;
+          text-align: start; 
+        }
+      }
+    }
+  }  
   

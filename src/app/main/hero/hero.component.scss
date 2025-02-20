@@ -4,7 +4,8 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: 24px;
+  overflow: hidden;
 
   .hero-title h1 {
     margin: 0;
@@ -50,7 +51,7 @@
       position: absolute;
       left: 0;
       top: 50%;
-      transform: translate(-100%, -50%) rotate(-90deg);
+      transform: translate(-30%, -50%) rotate(-90deg);
       white-space: nowrap;
       font-size: 1rem;
     }
