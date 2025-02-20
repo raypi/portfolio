@@ -54,25 +54,6 @@ body {
   width: 100vw;
 }
 
-/* Beispiel für einen Game Container */
-.game-container {
-  position: relative;
-  width: 720px;
-  height: 480px;
-  margin: auto;
-  border-radius: 20px;
-  overflow: hidden;
-  background-color: var(--backgroundColorGray);
-}
-
-#canvas {
-  width: 100%;
-  height: 100%;
-  display: block;
-  background-color: var(--backgroundColorOrange);
-  border-radius: 16px;
-}
-
 /* Content Wrapper */
 .content {
   display: flex;
