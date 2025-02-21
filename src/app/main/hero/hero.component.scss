@@ -6,11 +6,14 @@
   text-align: center;
   padding: 24px;
   overflow: hidden;
+  min-height: 100vh;
 
-  .hero-title h1 {
-    margin: 0;
-    line-height: 1.2;
-    font-size: 6rem; 
+  .hero-title {
+    h1 {
+      margin: 0;
+      line-height: 1.2;
+      font-size: 6rem; 
+    }
   }
 
   .hero-subtitle {
@@ -33,7 +36,9 @@
       }
 
       .name {
+        font-family: 'Overpass', sans-serif;
         font-size: 1.5rem;
+        color: #00BC8F;
       }
     }
   }
@@ -41,12 +46,13 @@
   .hero-footer {
     margin-top: 30px;
     width: 100%;
-    position: relative; // Damit der absolute Inhalt der E-Mail sich am .hero orientiert
-    display: flex;
-    justify-content: flex-end; // Damit der Scroll-Bereich rechts bleibt
-    align-items: center;
+    position: relative; // Basis für absolute Positionierung
     padding: 0 20px;
-
+  
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  
     .hero-email {
       position: absolute;
       left: 0;
@@ -55,55 +61,87 @@
       white-space: nowrap;
       font-size: 1rem;
     }
-
-    .hero-scroll {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      img {
-        max-width: 50px;
-      }
-
-      .scroll-text {
-        margin-top: 5px;
-        font-size: 0.9rem;
-      }
+  
+    // Beide Elemente werden übereinander gelegt:
+    .scroll-arrow {
+      position: absolute;
+      right: -15px;  // Position des Pfeil am Rand
+      // bottom: -70px; // Ausgangsposition
+      z-index: 1;   // Liegt hinter dem Text
+      animation: arrowSlideFade 2s ease-in-out infinite;
     }
+  
+    .scroll-text {
+      height: 180px;
+      width: 100px;
+      background-color: var(--backgroundColor);
+      position: absolute;
+      text-align: center;
+      right: -10px;
+      bottom: -250px;
+      z-index: 2;   // Bleibt stets über dem Pfeil
+      padding: 0 4px;
+      font-size: 1rem;
+    }
+  }
+
+  /* Keyframes für den Pfeil */
+@keyframes arrowSlideFade {
+  0% {
+    transform: translateY(-50px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(+200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(+200px);
+    opacity: 0;
   }
 }
 
-// Responsive Anpassungen für Telefonmodus
+
+/* Responsive Anpassungen für Telefonmodus */
 @media (max-width: 768px) {  
-.hero {
-  padding: 15px;
+  .hero {
+    padding: 15px;
 
-  .hero-title h1 {
-    font-size: 3.5rem; // Kleinere H1 für Mobilansicht
-  }
-
-  .hero-subtitle {
-    .line-with-name {
-      width: 80%; // Größere Breite, damit die Linie nicht zu kurz wird
-      justify-content: center;
-
-      .line {
-        flex: 2; // Längere Linie für bessere Optik
-      }
-
-      .name {
-        font-size: 1.3rem;
+    .hero-title {
+      h1 {
+        font-size: 3.5rem; // Kleinere H1 für Mobilansicht
       }
     }
-  }
 
-  .hero-footer {
-    .hero-email {
-      font-size: 0.9rem;
+    .hero-subtitle {
+      .line-with-name {
+        width: 80%; // Größere Breite, damit die Linie nicht zu kurz wird
+        justify-content: center;
+
+        .line {
+          flex: 2; // Längere Linie für bessere Optik
+        }
+
+        .name {
+          font-size: 1.3rem;
+        }
+      }
     }
 
-    .hero-scroll img {
-      max-width: 40px; // Kleineres Scroll-Icon
+    .hero-footer {
+      .hero-email {
+        font-size: 0.9rem;
+      }
+
+      .hero-scroll {
+        img {
+          max-width: 40px; // Kleineres Scroll-Icon
+        }
+      }
     }
   }
 }
