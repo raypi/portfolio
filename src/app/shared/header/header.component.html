@@ -1,23 +1,23 @@
 <header>
-    <div class="header-content">
-        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="80">
-                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
-                font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="black">
-      [ R M ]
-    </text>
-        </svg>
-        <div class="header-controls">
-            <div class="language-selector">
-              <!-- Dynamisch gerenderte Sprach-Icons werden hier eingefügt -->
-            </div>
-            <a *ngFor="let lang of languages"
-           [href]="lang.link"
-           class="language-item"
-           [class.active]="lang.active"
-           (click)="onLanguageSelect(lang, $event)">
-          <img [src]="lang.img" [alt]="lang.language">
-        </a>
-            <img class="burger-menu" src="assets/img/burgermenue.png" alt="burgermenue">
-          </div>
+  <div class="header-content">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="80">
+      <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+            font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="black">
+        [ R M ]
+      </text>
+    </svg>
+    <div class="header-controls">
+      <div class="language-selector">
+        @for (lang of languages; track $index) {
+          <a [href]="lang.link"
+             class="language-item"
+             [class.active]="lang.active"
+             (click)="onLanguageSelect(lang, $event)">
+            <img [src]="lang.img" [alt]="lang.language">
+          </a>
+        }
+      </div>
+      <img class="burger-menu" src="assets/img/burgermenue.png" alt="burgermenue">
     </div>
+  </div>
 </header>
