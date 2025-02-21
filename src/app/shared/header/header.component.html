@@ -6,6 +6,18 @@
       [ R M ]
     </text>
         </svg>
-<img src="assets/img/burgermenue.png" alt="burgermenue">
+        <div class="header-controls">
+            <div class="language-selector">
+              <!-- Dynamisch gerenderte Sprach-Icons werden hier eingefügt -->
+            </div>
+            <a *ngFor="let lang of languages"
+           [href]="lang.link"
+           class="language-item"
+           [class.active]="lang.active"
+           (click)="onLanguageSelect(lang, $event)">
+          <img [src]="lang.img" [alt]="lang.language">
+        </a>
+            <img class="burger-menu" src="assets/img/burgermenue.png" alt="burgermenue">
+          </div>
     </div>
 </header>

@@ -1,3 +1,50 @@
+.header-controls {
+  display: flex;
+  align-items: center;
+}
+
+.language-selector {
+  display: flex;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+.language-item {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  img {
+    width: 24px;
+    height: auto;
+    margin-right: 40px;
+  }
+}
+
+/* Pseudo-Element für den Unterstrich */
+.language-item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Abstand zum Bild anpassen */
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  background: black;
+  width: 0;
+  animation: underlineExpand 1s forwards;
+}
+
+@keyframes underlineExpand {
+  from {
+    width: 0;
+    left: 50%;
+  }
+  to {
+    width: 100%;
+    left: 0;
+  }
+}
+
+
 @media (min-width: 768px) and (max-width: 820px) {
     .header-content {
       padding: 0 40px;
