@@ -1,9 +1,9 @@
 <div class="my-skills">
   <div class="skills-container">
-    <h2>My Skills</h2>
+    <h2>My skills</h2>
     <div class="skills-grid">
       <div class="skill-item" *ngFor="let skill of skills">
-        <img [src]="skill.image" [alt]="skill.name">
+        <img class="logo" [src]="skill.image" [alt]="skill.name">
         <span>{{ skill.name }}</span>
       </div>
     </div>

@@ -1,4 +1,13 @@
 .my-skills {
+  margin-bottom: 100px;
+
+  h2{
+    transition: color 0.3s; // sorgt für sanften Übergang der Farbe
+    &:hover {
+      color: #00BC8F;
+    }
+  }
+
   .skills-container {
     border: 4px solid black;  // Fetter schwarzer Rahmen
     position: relative;
@@ -8,7 +17,7 @@
 
   .skills-container h2 {
     position: absolute;
-    top: -14px; /* Anpassen, sodass die Linie mittig an der Schrift verläuft */
+    top: -30px; /* Anpassen, sodass die Linie mittig an der Schrift verläuft */
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--backgroundColor); /* Gleicher Hintergrund wie die Seite */
@@ -47,13 +56,47 @@
     font-size: 0.9rem;
   }
 
+  .logo {
+    width: 50px; /* Basisgröße */
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  .logo:hover {
+    animation: horizontalMove 5s linear infinite;
+  }
+  
+  @keyframes horizontalMove {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(50px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .element {
+    animation: horizontalMove 3s linear infinite;
+  }
+  
+  
+
   .skills-arrow {
     margin-top: 20px;
     text-align: left;
+    cursor: pointer;
 
     img {
       width: 50px;  // Größe anpassen
       height: auto;
+      transition: transform 0.3s ease;
+      transform: top left; //start oben links
+    }
+
+    &:hover img {
+      transform: scale(1.5) translate(20px, 20px); // wächst um 50%
     }
   }
 }
