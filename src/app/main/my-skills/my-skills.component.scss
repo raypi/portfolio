@@ -39,6 +39,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
   }
 
   .skills-row {
@@ -59,26 +60,27 @@
   .logo {
     width: 50px; /* Basisgröße */
     height: auto;
-    transition: transform 0.3s ease;
   }
   .logo:hover {
-    animation: horizontalMove 5s linear infinite;
+    animation: customHorizontal 5s linear infinite;
   }
   
-  @keyframes horizontalMove {
+  @keyframes customHorizontal {
     0% {
-      transform: translateX(0);
+      transform: translateX(0) scale(1);
+    }
+    40% {
+      transform: translateX(50px) scale(1);
     }
     50% {
-      transform: translateX(50px);
+      transform: translateX(50px) scale(0.7);
+    }
+    60% {
+      transform: translateX(-50px) scale(0.7);
     }
     100% {
-      transform: translateX(0);
+      transform: translateX(0) scale(1);
     }
-  }
-  
-  .element {
-    animation: horizontalMove 3s linear infinite;
   }
   
   
