@@ -15,6 +15,10 @@
       h2 {
         margin-bottom: 16px;
         font-size: 2rem;
+        transition: color 0.3s; // sorgt für sanften Übergang der Farbe
+        &:hover {
+          color: #00BC8F;
+        }
       }
       
       p {
@@ -50,17 +54,21 @@
       
       // Zentrierter Button
       .talk-button {
+        font-family: 'Overpass', sans-serif;
+        font-weight: 400;
+        font-size: 24px;
         border: 2px solid black;
-        padding: 8px 32px;
+        padding: 12px 32px;
         background: transparent;
         cursor: pointer;
         font-weight: bold;
         display: block;
         margin: 0 auto;
-        transition: background-color 0.3s;
+        transition: padding 0,3s, font-weight 0,3s;
         
         &:hover {
-          background-color: rgba(0, 0, 0, 0.05);
+          padding: 12px 62px;
+          font-weight: bold;
         }
       }
     }
@@ -69,24 +77,47 @@
     .about-me-right {
       flex: 1;
       text-align: right;
-      
+      position: relative; // Container als Bezugspunkt
+    
       img {
         width: 100%;
         height: auto;
         object-fit: cover;
+        display: block;
+      }
+    
+      &:hover::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 4px solid black;  // Rahmen in schwarz
+        transform: translate(20px, 20px); // Rahmen um 20px nach rechts und unten verschoben
+        box-sizing: border-box;
+        pointer-events: none; // verhindert, dass das Pseudo-Element Interaktionen blockiert
+        z-index: 2; // wird über dem Bild angezeigt
       }
     }
+    
   }
   
   // Pfeil unterhalb, rechtsbündig
   .about-me-arrow {
     margin-top: 20px;
-    margin-right: 400px;
+    margin-right: 100px;
     text-align: right;
     
     img {
       width: 50px;
       height: auto;
+      transition: transform 0.3s ease;
+      transform-origin: top right; // ankerpunkt oben rechts um nach links unten zu wachsen
+    }
+
+    &:hover img {
+      transform: scale(1.5) translate(-20px, 20px);
     }
   }
 }
