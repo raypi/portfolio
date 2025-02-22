@@ -1,3 +1,191 @@
+// .portfolio {
+//   text-align: center;
+//   padding: 20px;
+
+//   h2 {
+//     margin-bottom: 10px;
+//   }
+
+//   .portfolio-description {
+//     margin-bottom: 30px;
+//     display: inline-block;
+//   }
+
+//   .portfolio-table {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 40px; /* Abstand zwischen den Zeilen */
+//   }
+
+//   .portfolio-row {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     gap: 20px;
+
+//     .portfolio-col {
+//       flex: 1;
+//       padding: 10px;
+//     }
+
+//     .image-col {
+//       position: relative;
+
+//       &:hover::after {
+//         content: '';
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         width: 100%;
+//         height: 100%;
+//         border: 2px solid black; 
+//         transform: translate(20px, 20px);
+//         box-sizing: border-box;
+//         pointer-events: none;
+//         z-index: 2;
+//       }
+
+//       &:hover img {
+//         filter: grayscale(0%);
+//       }
+
+//       img {
+//         max-width: 100%;
+//         height: auto;
+//         display: block;
+//         filter: grayscale(100%);
+//         transition: filter 0.3s ease;
+//         cursor: pointer;
+//       }
+
+//       &::before {
+//         content: '';
+//         position: absolute;
+//         top: 50%;
+//         transform: translateY(-50%);
+//         width: 50px;
+//         height: 50px;
+//         background: url('/assets/img/arrowPortfolioAnimation.png') no-repeat center;
+//         background-size: contain;
+//         transition: transform 0.3s ease;
+//       }
+
+//       &:hover::before {
+//         transform: translateY(-50%) rotate(120deg);
+//       }
+
+//     }
+
+//     .info-col {
+//       text-align: left;
+//       opacity: 0; /* Info-Spalte dauerhaft ausgeblendet */
+//       transition: opacity 0.3s ease;
+
+//       h3 {
+//         margin-top: 0;
+//       }
+
+//       .skills {
+//         margin: 10px 0;
+//         font-weight: bold;
+//       }
+
+//       .description {
+//         margin-bottom: 20px;
+//       }
+
+//       button {
+//         border: 2px solid black;
+//         padding: 8px 32px;
+//         background: transparent;
+//         cursor: pointer;
+//         font-weight: bold;
+//         transition: background-color 0.3s;
+//       }
+//     }
+
+//       /* Info-Spalte einblenden, wenn man mit der Maus über die Zeile fährt */
+//   &:hover .info-col {
+//     opacity: 1;
+//   }
+
+// }
+
+//   /* Bei geraden Zeilen: Spalten tauschen */
+//   .portfolio-row.reverse {
+//     flex-direction: row-reverse;
+
+//     .info-col {
+//       text-align: left;
+//     }
+
+//     .image-col {
+//       &::before {
+//         right: auto;
+//         left: -60px; /* Pfeil auf die linke Seite setzen */
+//       }
+
+//       &:hover::before {
+//         transform: translateY(-50%) rotate(-110deg); /* Pfeil nach links drehen */
+//       }
+
+//   }
+// }
+
+// @media (max-width: 899px) {
+//   .portfolio {
+//     padding: 0 40px;
+//     .portfolio-row {
+//       flex-direction: column !important; /* Überschreibt auch reverse */
+//       align-items: center;
+
+//       .portfolio-col {
+//         padding: 10px 0;
+//       }
+
+//       .image-col {
+//         max-width: 490px;
+//         width: auto;
+//       }
+
+//       .info-col {
+//         order: 2;
+//         text-align: start; 
+//       }
+//     }
+//   }
+// }
+
+//   @media (max-width: 899px) {
+//     .portfolio {
+//       padding: 0 40px;
+//       .portfolio-row {
+//         flex-direction: column !important; /* Überschreibt auch reverse */
+//         align-items: center;
+  
+//         .portfolio-col {
+//           padding: 10px 0;
+//         }
+  
+//         .image-col {
+//           max-width: 490px;
+//           width: auto;
+//         }
+  
+//         .info-col {
+//           order: 2;
+//           text-align: start; 
+//         }
+
+//         &::before {
+//           display: none; /* Pfeil in der mobilen Ansicht ausblenden */
+//         }
+//       }
+//     }
+//   }  
+// }
+
+
 .portfolio {
   text-align: center;
   padding: 20px;
@@ -22,6 +210,7 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+    position: relative;
 
     .portfolio-col {
       flex: 1;
@@ -38,7 +227,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        border: 2px solid black; // Rahmen, passe hier den Wert an (z.B. 1px für 1px)
+        border: 2px solid black;
         transform: translate(20px, 20px);
         box-sizing: border-box;
         pointer-events: none;
@@ -57,11 +246,33 @@
         transition: filter 0.3s ease;
         cursor: pointer;
       }
+
+      /* Pfeil-Bild */
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -45px; /* Standard: Pfeil auf die rechte Seite setzen */
+        width: 50px;
+        height: 50px;
+        background: url('/assets/img/arrowPortfolioAnimation.png') no-repeat center;
+        background-size: contain;
+        transform: translateY(-50%) rotate(0deg);
+        opacity: 0; //Pfeil verstecken
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        z-index: 3;
+      }
+
+
+      &:hover::before {
+        transform: translateY(-50%) rotate(-120deg); /* Pfeil nach rechts drehen */
+        opacity: 1; /* Pfeil sichtbar machen */
+      }
     }
 
     .info-col {
       text-align: left;
-      opacity: 0; /* Info-Spalte dauerhaft ausgeblendet */
+      opacity: 0;
       transition: opacity 0.3s ease;
 
       h3 {
@@ -87,19 +298,33 @@
       }
     }
 
-      /* Info-Spalte einblenden, wenn man mit der Maus über die Zeile fährt */
-  &:hover .info-col {
-    opacity: 1;
+    &:hover .info-col {
+      opacity: 1;
+    }
   }
 
-}
-
-  /* Bei geraden Zeilen: Spalten tauschen */
+  /* Umgekehrte Reihenfolge für jede zweite Zeile */
   .portfolio-row.reverse {
     flex-direction: row-reverse;
 
     .info-col {
       text-align: left;
+    }
+
+    .image-col {
+      &::before {
+        right: auto;
+        left: 0; /* Pfeil auf die linke Seite setzen */
+        transform: translateY(-50%) rotate(0deg); /* Standardposition */
+        opacity: 0; //Pfeil verstecken
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        z-index: 3;
+      }
+
+      &:hover::before {
+        transform: translateY(-50%) rotate(-120deg); /* Pfeil nach links drehen */
+        opacity: 1; /* Pfeil sichtbar machen */
+      }
     }
   }
 }
@@ -107,8 +332,9 @@
 @media (max-width: 899px) {
   .portfolio {
     padding: 0 40px;
+    
     .portfolio-row {
-      flex-direction: column !important; /* Überschreibt auch reverse */
+      flex-direction: column !important;
       align-items: center;
 
       .portfolio-col {
@@ -118,36 +344,16 @@
       .image-col {
         max-width: 490px;
         width: auto;
+
+        &::before {
+          display: none; /* Pfeil in der mobilen Ansicht ausblenden */
+        }
       }
 
       .info-col {
         order: 2;
-        text-align: start; 
+        text-align: start;
       }
     }
   }
 }
-
-  @media (max-width: 899px) {
-    .portfolio {
-      padding: 0 40px;
-      .portfolio-row {
-        flex-direction: column !important; /* Überschreibt auch reverse */
-        align-items: center;
-  
-        .portfolio-col {
-          padding: 10px 0;
-        }
-  
-        .image-col {
-          max-width: 490px;
-          width: auto;
-        }
-  
-        .info-col {
-          order: 2;
-          text-align: start; 
-        }
-      }
-    }
-  }  
