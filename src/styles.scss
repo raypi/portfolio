@@ -30,6 +30,10 @@ h1 {
 h2 {
   font-family: 'Syne', sans-serif;
   font-size: 48px;
+  transition: color 0.3s; // sorgt für sanften Übergang der Farbe
+  &:hover {
+      color: #00BC8F;
+    }
 }
 
 h3 {
