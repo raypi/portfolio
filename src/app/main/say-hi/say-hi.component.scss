@@ -26,7 +26,7 @@
     text-align: center;
   
     h3 {
-      color: green;
+      color: #00BC8F;
       margin-bottom: 10px;
     }
   
@@ -49,6 +49,12 @@
         color: white;
         padding: 5px;
         font-size: 1rem;
+        transition: border 0.3s ease;
+      }
+
+      input:hover,
+      textarea:hover {
+        border: 2px solid white;
       }
   
       input:focus,
@@ -85,12 +91,38 @@
   
       input[type="checkbox"] {
         margin-right: 10px;
+        /* Für bessere Stilisierung: */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #ccc;
+        transition: background-color 0.3s ease;
+      }
+      
+      // Hover-Effekt für die Checkbox
+      input[type="checkbox"]:hover {
+        background-color: #00BC8F;
+      }
+
+      input[type="checkbox"]:hover + label a {
+        transform: scale(1.1);
       }
   
       a {
-        font-style: italic;
-        color: white;
-        text-decoration: underline;
+        width: 100px;
+        text-align: center;
+        color: #00BC8F;
+        text-decoration: none;
+        display: inline-block;
+        transition: transform 0.3s ease;
+      }
+
+      a:hover {
+        /* Option 1: Mit transform scale */
+        transform: scale(1.1);
+        
       }
     }
   
