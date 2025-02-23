@@ -1,18 +1,20 @@
 <div class="say-hi-section">
-    <div class="say-hi-inner">
-      <h2>Say Hi!</h2>
-      <div class="contact-form">
-        <h3>Want to discuss a new project?</h3>
-        <p class="form-description">
-          Say hallo! Let’s discuss your ideas and make it happen
-        </p>
-        <!-- ngIf in @If tauschen -->
+  <div class="say-hi-inner">
+    <h2>Say Hi!</h2>
+    <div class="contact-form">
+      <h3>Want to discuss a new project?</h3>
+      <p class="form-description">
+        Say hallo! Let’s discuss your ideas and make it happen
+      </p>
+      <!-- Formular mit ngSubmit -->
+      <form #ngForm="ngForm" (ngSubmit)="sendMessage(ngForm)">
         <!-- Name Input -->
         <div class="input-group">
           <input
             type="text"
+            name="name"
             placeholder="Your name..."
-            [(ngModel)]="name"
+            [(ngModel)]="contactData.name"
             (blur)="validateName()"
           />
           <!-- Zeige bei Fehler das rote Icon, bei gültiger Eingabe das grüne -->
@@ -22,7 +24,7 @@
             alt="Error"
           />
           <img
-            *ngIf="!nameError && name"
+            *ngIf="!nameError && contactData.name"
             src="assets/img/contactcorrct.png"
             alt="Correct"
           />
@@ -35,8 +37,10 @@
         <div class="input-group">
           <input
             type="email"
+            name="email"
             placeholder="Your email..."
-            [(ngModel)]="email"
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            [(ngModel)]="contactData.email"
             (blur)="validateEmail()"
           />
           <img
@@ -45,7 +49,7 @@
             alt="Error"
           />
           <img
-            *ngIf="!emailError && email"
+            *ngIf="!emailError && contactData.email"
             src="assets/img/contactcorrct.png"
             alt="Correct"
           />
@@ -57,32 +61,47 @@
         <!-- Message Textarea -->
         <div class="input-group">
           <textarea
+            name="message"
             placeholder="Your Message..."
             maxlength="300"
-            [(ngModel)]="message"
+            [(ngModel)]="contactData.message"
             (blur)="validateMessage()"
           ></textarea>
+          <!-- Zeige bei Fehler das rote Icon, bei gültiger Eingabe das grüne -->
+          <img
+            *ngIf="messageError"
+            src="assets/img/contactincorrect.png"
+            alt="Error"
+          />
+          <img
+            *ngIf="!messageError && contactData.message"
+            src="assets/img/contactcorrct.png"
+            alt="Correct"
+          />
         </div>
         <div class="error-message" *ngIf="messageError">
           Your Message is empty
         </div>
-  
-        <!-- Checkbox -->
-        <div class="checkbox-group">
-          <input
-            type="checkbox"
-            id="privacy"
-            [(ngModel)]="privacyAccepted"
-          />
-          <label for="privacy">
-            I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.
-          </label>
-        </div>
-  
-        <!-- Send Message Button -->
-        <button [disabled]="!isFormValid()" (click)="sendMessage()">
-          Send Message
-        </button>
+      </form>
+      
+      <!-- Checkbox (außerhalb des Formulars) -->
+      <div class="checkbox-group">
+        <input
+          type="checkbox"
+          id="privacy"
+          name="privacy"
+          [(ngModel)]="privacyAccepted"
+          [ngModelOptions]="{standalone: true}"
+        />
+        <label for="privacy">
+          I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.
+        </label>
       </div>
+  
+      <!-- Send Message Button -->
+      <button type="submit" [disabled]="!isFormValid()">
+        Send Message
+      </button>
     </div>
-  </div>  
+  </div>
+</div>
