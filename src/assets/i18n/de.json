@@ -1,6 +1,6 @@
 {
     "hero": {
-      "titleI": "Frontend",
+      "titleI": "Frontend {{name}}",
       "titleII": "Entwickler",
       "name": "Ray Don"
     },
