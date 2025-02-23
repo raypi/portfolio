@@ -1,0 +1,39 @@
+{
+    "hero": {
+      "titleI": "Frontend",
+      "titleII": "Entwickler",
+      "name": "Ray Don"
+    },
+
+    "about-me": {
+      "hello": "hello {{value}}",
+      "title": "Translation Demo"
+    },
+
+    "my-skills": {
+      "hello": "hello {{value}}",
+      "title": "Translation Demo"
+    },
+
+    "portfolio": {
+      "hello": "hello {{value}}",
+      ",title": "Translation Demo"
+    },
+
+    "references": {
+      "hello": "hello {{value}}",
+      "title": "Translation Demo"
+    },
+
+    "say-hi": {
+      "hello": "hello {{value}}",
+      "title": "Translation Demo"
+    },
+
+    "footer": {
+      "hello": "hello {{value}}",
+      "title": "Translation Demo"
+    }
+
+
+  }
