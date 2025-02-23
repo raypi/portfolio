@@ -1,32 +1,38 @@
 import { Component } from '@angular/core';
+import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe, TranslateDirective],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  
-    languages: {
-      language: string;
-      img: string;
-      link: string;
-      active: boolean;
-    } [] = [
-      { language: 'English', img: 'assets/img/flackeGb.png', link: '#', active: true },
-      { language: 'German',  img: 'assets/img/flackeGermany.png', link: '#', active: false },
-      { language: 'Spanish', img: 'assets/img/flackeSpain.png', link: '#', active: false },
-      { language: 'Russian', img: 'assets/img/flackeRussia.png', link: '#', active: false }
-    ]
 
-    onLanguageSelect(selectedLang: any, event: Event) {
-      event.preventDefault(); // Verhindert das Standardverhalten des Links
-      // Setze alle Sprachen auf inaktiv
-      this.languages.forEach(lang => lang.active = false);
-      // Aktiviere die ausgewählte Sprache
-      selectedLang.active = true;
-      // Hier kannst du später den Sprachwechsel implementieren
-    }   
+  languages: {
+    language: string;
+    img: string;
+    code: string;
+    active: boolean;
+
+  }[] = [
+    { language: 'English', img: 'assets/img/flackeGb.png', code: 'en', active: true },
+    { language: 'German', img: 'assets/img/flackeGermany.png', code: 'de', active: false }, 
+    { language: 'Spanish', img: 'assets/img/flackeSpain.png', code: 'es', active: false },
+    { language: 'Russian', img: 'assets/img/flackeRussia.png', code: 'ru', active: false }
+  ];
+
+  constructor(private translate: TranslateService) {}
+
+  changeLanguage(languageCode: string) {
+    this.translate.use(languageCode);    
+    // Setzt die aktive Sprache
+    this.languages.forEach(lang => lang.active = lang.code === languageCode);
+  }
+
+  onLanguageSelect(lang: any, event: Event) {
+    event.preventDefault(); // Verhindert das Neuladen der Seite
+    this.changeLanguage(lang.code);
+  }
 }
