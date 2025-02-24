@@ -106,16 +106,15 @@
 }
 
 
+
 /* Responsive Anpassungen für Telefonmodus */
-@media (max-width: 768px) {  
+@media (min-width: 318px) and (max-width: 767px) { 
+  
+  .hero-title h1 {
+    font-size: 2.5rem;
+  }
   .hero {
     padding: 15px;
-
-    .hero-title {
-      h1 {
-        font-size: 3.5rem; // Kleinere H1 für Mobilansicht
-      }
-    }
 
     .hero-subtitle {
       .line-with-name {
