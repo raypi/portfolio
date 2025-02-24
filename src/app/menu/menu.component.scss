@@ -1,0 +1,12 @@
+.menu-page {
+    height: calc(100vh - var(--headerHeight) - var(--footerHeight));
+    top: 100px;     // 100px Abstand vom oberen Rand, damit der Header sichtbar bleibt
+    bottom: 100px;  // 100px Abstand vom unteren Rand, damit der Footer sichtbar bleibt
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+  }
