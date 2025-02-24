@@ -1,6 +1,6 @@
 <div class="my-skills">
   <div class="skills-container">
-    <h2>My skills</h2>
+    <h2>{{ 'my-skills.title' | translate }}</h2>
     <div class="skills-grid">
       <div class="skill-item" *ngFor="let skill of skills">
         <img class="logo" [src]="skill.image" [alt]="skill.name">

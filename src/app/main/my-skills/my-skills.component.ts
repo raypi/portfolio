@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Skill } from './skills.interface';
+import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 
 
 
@@ -8,7 +9,7 @@ import { Skill } from './skills.interface';
 @Component({
   selector: 'app-my-skills',
   standalone: true,
-  imports: [CommonModule,],
+  imports: [CommonModule, TranslatePipe, TranslateDirective],
   templateUrl: './my-skills.component.html',
   styleUrl: './my-skills.component.scss'
 })

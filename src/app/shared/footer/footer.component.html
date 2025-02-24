@@ -16,8 +16,11 @@
           </a>
         </div>
         <div class="legal">
-          <a (click)="toggleLegalNotice()" [class.active]="isLegalNoticeOpen" class="legal-notice">legal notice</a>
-        </div>        
+          <a (click)="toggleLegalNotice()" [class.active]="isLegalNoticeOpen" class="legal-notice">
+            {{ 'footer.notice' | translate }}
+          </a>
+        </div>
+              
       </div>
     </div>
   </footer>

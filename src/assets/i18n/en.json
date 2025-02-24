@@ -6,34 +6,94 @@
     },
 
     "about-me": {
-      "hello": "hello {{value}}",
-      "title": "Translation Demo"
+      "title": "About me",
+      "description": "Hello! I'm Ray from Rostock, a passionate web developer focused on creating dynamic and user-friendly websites. My strengths lie in frontend development with HTML, CSS, JavaScript, and Angular. I prioritize clean, well-structured code and always strive for optimal solutions to complex problems. If you think I would be a good fit for your project, feel free to contact me.",
+      "info": {
+        "location": "based in Rostock",
+        "remote": "open to work remote"
+      },
+      "button": "Let's talk"
     },
 
     "my-skills": {
-      "hello": "hello {{value}}",
-      "title": "Translation Demo"
+        "title": "My skills"
     },
 
     "portfolio": {
-      "hello": "hello {{value}}",
-      ",title": "Translation Demo"
+      "title": "Portfolio",
+      "description": "Explore a Selection of my work here - Interact with projects to see my skills in action.",
+      "join": {
+        "projekt": "Join",
+        "projectDescription": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      },
+      "elPolloLoco": {
+        "projekt": "El Pollo Loco",
+        "projectDescription": "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and bottles to fight against the killer chicken."
+      }
     },
 
-    "references": {
-      "hello": "hello {{value}}",
-      "title": "Translation Demo"
-    },
 
-    "say-hi": {
-      "hello": "hello {{value}}",
-      "title": "Translation Demo"
+ "references": {
+  "title": "Referenzen",
+  "intro": "I thrive both independently and as Part of a Team. Here's what my colleagues have to say about working with me.",
+  "list": [
+    {
+      "name": "V.Schuster",
+      "title": "Team Partner",
+      "reference": "Ray consistently delivers clean, efficient code and innovative solutions. His deep technical knowledge and proactive attitude greatly enhanced our project outcomes, making him a highly valuable asset."
     },
+    {
+      "name": "J. Müller",
+      "title": "Director",
+      "reference": "Ray demonstrates outstanding programming skills and a strong commitment to quality. His ability to solve complex problems and collaborate effectively makes him indispensable in any development team."
+    },
+    {
+      "name": "T.Webelein",
+      "title": "Team Partner",
+      "reference": "Ray is a highly skilled programmer with exceptional analytical abilities. He consistently delivers reliable solutions on time, ensuring smooth project execution. His teamwork and dedication are truly commendable."
+    }
+  ]
+},
+
+
+
+"say-hi": {
+  "title": "Say Hi!",
+  "contactTitle": "Want to discuss a new project?",
+  "formDescription": "Say hallo! Let’s discuss your ideas and make it happen",
+  "placeholder": {
+    "name": "Your name...",
+    "email": "Your email...",
+    "message": "Your Message..."
+  },
+  "error": {
+    "name": "Your name is required",
+    "email": "Your email is required",
+    "message": "Your Message is empty"
+  },
+  "checkbox": {
+    "part1": "I've read the",
+    "linkText": "privacy policy",
+    "part2": "and agree to the processing of my data as outlined."
+  },
+  "button": "Send Message",
+  "success": "Your message has been sent successfully."
+},
+
+
 
     "footer": {
-      "hello": "hello {{value}}",
-      "title": "Translation Demo"
-    }
+      "notice": "Legal Notice"
+    },
+
+ "legalnotice": {
+  "close": "Schließen",
+  "title": "Legal Notice",
+  "address": "Rainer Musch<br>Streitwalder Straße 4<br>04654 Frohburg",
+  "contact": "Contact",
+  "contactDetails": "Phone: [Telefonnummer]<br>E-Mail: contact&#64;developing-sailor.com",
+  "source": "Source: <a href=\"https://www.e-recht24.de\" target=\"_blank\" rel=\"noopener noreferrer\">e-recht24.de</a>"
+}
 
 
   }
