@@ -82,7 +82,7 @@
         <div class="error-message" *ngIf="messageError">
           Your Message is empty
         </div>
-      </form>
+      
       
       <!-- Checkbox (außerhalb des Formulars) -->
       <div class="checkbox-group">
@@ -91,7 +91,6 @@
           id="privacy"
           name="privacy"
           [(ngModel)]="privacyAccepted"
-          [ngModelOptions]="{standalone: true}"
         />
         <label for="privacy">
           I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.
@@ -102,6 +101,10 @@
       <button type="submit" [disabled]="!isFormValid()">
         Send Message
       </button>
+      <div *ngIf="successMessage" class="success-message">
+        {{ successMessage }}
+      </div>
+    </form>
     </div>
   </div>
 </div>

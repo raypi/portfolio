@@ -1,23 +1,26 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-say-hi',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './say-hi.component.html',
   styleUrls: ['./say-hi.component.scss']
 })
 export class SayHiComponent {
-  // Schalter für Testzwecke: Wenn mailTest true ist, wird keine E-Mail gesendet.
-  mailTest = true;
 
+   http = inject(HttpClient);
+  // Schalter für Testzwecke: Wenn mailTest true ist, wird keine E-Mail gesendet.
+  mailTest = false;
+  successMessage: string = '';
   privacyAccepted: boolean = false;
   nameError: boolean = false;
   emailError: boolean = false;
   messageError: boolean = false;
+  messageSent: boolean = false;
 
   contactData = {
     name: "",
@@ -26,19 +29,16 @@ export class SayHiComponent {
   };
 
   // Konfiguration für den POST-Request
-  post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+  post = { 
+    endPoint: 'https://developing-sailor.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
-        'Content-Type': 'text/plain',
-        // Hinweis: Der Header responseType wird hier nicht als HTTP-Header versendet, sondern
-        // als Option an den HttpClient. Daher kannst du das in diesem Objekt auch weglassen
+        'Content-Type': 'application/json',
+        
       },
     },
   };
-
-  constructor(private http: HttpClient) {}
 
   validateName() {
     this.nameError = !this.contactData.name.trim();
@@ -54,14 +54,15 @@ export class SayHiComponent {
   }
 
   isFormValid(): boolean {
-    return !!this.contactData.name.trim() &&
+    return !this.messageSent &&
+           !!this.contactData.name.trim() &&
            !!this.contactData.email.trim() &&
            !!this.contactData.message.trim() &&
            this.privacyAccepted;
   }
+  
 
   sendMessage(ngForm: NgForm) {
-    // Der Formular-Submit erfolgt nur, wenn das Formular valid ist.
     if (ngForm.submitted && ngForm.form.valid) {
       if (!this.mailTest) {
         this.http.post(
@@ -71,7 +72,13 @@ export class SayHiComponent {
         ).subscribe({
           next: (response) => {
             console.info('Response:', response);
+            this.successMessage = 'Ihre Nachricht wurde erfolgreich gesendet.';
             ngForm.resetForm();
+            this.privacyAccepted = false; // Checkbox zurücksetzen
+            this.messageSent = true; // Weitere Sendungen verhindern
+            setTimeout(() => {
+              this.successMessage = '';
+            }, 5000);
           },
           error: (error) => {
             console.error(error);
@@ -79,10 +86,17 @@ export class SayHiComponent {
           complete: () => console.info('send post complete'),
         });
       } else {
-        // Im Testmodus: Daten werden nur in der Konsole ausgegeben.
         console.info('Testmodus aktiviert. Folgende Daten wurden erfasst:', this.contactData);
+        this.successMessage = 'Ihre Nachricht wurde erfolgreich gesendet (Testmodus).';
         ngForm.resetForm();
+        this.privacyAccepted = false; // Checkbox zurücksetzen
+        this.messageSent = true; // Weitere Sendungen verhindern
+        setTimeout(() => {
+          this.successMessage = '';
+        }, 5000);
       }
     }
   }
+    
 }
+
