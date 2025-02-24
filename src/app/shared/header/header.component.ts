@@ -10,6 +10,8 @@ import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-transl
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  isMenuOpen = false;
+
   languages: {
     language: string;
     img: string;
@@ -25,9 +27,15 @@ export class HeaderComponent {
   // Nur ein Konstruktor mit beiden Injections:
   constructor(private router: Router, private translate: TranslateService) {}
 
-  navigateToMenu() {
-    this.router.navigate(['/menu']);
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+    if (this.isMenuOpen) {
+      this.router.navigate(['/menu']);
+    } else {
+      this.router.navigate(['/']);
+    }
   }
+
 
   changeLanguage(languageCode: string) {
     this.translate.use(languageCode);

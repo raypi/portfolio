@@ -1,12 +1,81 @@
 .menu-page {
-    height: calc(100vh - var(--headerHeight) - var(--footerHeight));
-    top: 100px;     // 100px Abstand vom oberen Rand, damit der Header sichtbar bleibt
-    bottom: 100px;  // 100px Abstand vom unteren Rand, damit der Footer sichtbar bleibt
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: black;
+  height: calc(100vh - var(--headerHeight) - var(--footerHeight) - 78px);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  color: black;
+
+  p {
+    font-size: 32px;
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+
+    // Linker Rahmen (vertikal) – 40% Höhe, positioniert mit top: 70%
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 70%;
+      width: 4px;
+      height: 40%;
+      background-color: currentColor;
+      transform: translateY(calc(-50% + 4px)) scaleY(1);
+      transform-origin: bottom;
+    }
+
+    // Unterer Rahmen (horizontal) – startet mit 15% Breite
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 4px;
+      width: 15%;
+      background-color: currentColor;
+    }
+
+    &:hover {
+      // Erst: linker Rahmen löst sich auf
+      &::before {
+        animation: leftDissolve 0.5s forwards;
+      }
+      // Danach: unterer Rahmen wächst und schrumpft, wobei der linke Rand nach rechts wandert
+      &::after {
+        animation: bottomAnimation 1s forwards 0.5s;
+      }
+    }
   }
+}
+
+// Animation für den linken Rahmen (::before)
+// Der Strich schrumpft von oben (bei transform-origin: bottom) nach unten.
+@keyframes leftDissolve {
+  0% {
+    transform: translateY(calc(-50% + 4px)) scaleY(1);
+  }
+  100% {
+    transform: translateY(calc(-50% + 4px)) scaleY(0);
+  }
+}
+
+// Kombinierte Animation für den unteren Rahmen (::after):
+// 0%: Start bei left: 0 und 15% Breite
+// 50%: Wachstum auf left: 0 und 100% Breite
+// 100%: Der Rahmen verschiebt sich von links (left: 40%) und schrumpft auf 60% Breite,
+// sodass der rechte Rand fix bleibt (40% + 60% = 100%).
+@keyframes bottomAnimation {
+  0% {
+    left: 0;
+    width: 15%;
+  }
+  50% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 40%;
+    width: 60%;
+  }
+}
