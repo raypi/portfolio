@@ -1,5 +1,5 @@
 .legalnotice-page {
-
+    position: relative; // Notwendig für absolute Positionierung des Icons
     height: calc(100vh - var(--headerHeight) - var(--footerHeight) - 78px);
     display: flex;
     flex-direction: column;
@@ -7,27 +7,30 @@
     align-items: center;
     color: black;
     padding: 20px;
-    background-color: #f9f9f9; // Optional: heller Hintergrund für bessere Lesbarkeit
+    background-color: #f9f9f9; // Optional: heller Hintergrund
   
     h1 {
-      font-size: 1.0rem;
-      margin-bottom: 0.5rem;
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
   
     p {
-      font-size: 0.75rem;
-      padding: 8px;
+      font-size: 1.125rem;
+      padding: 16px;
       position: relative;
       overflow: hidden;
       line-height: 1.6;
       max-width: 800px;
       text-align: left;
     }
+  }
   
-    .legal-content {
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-    }
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;  // Größe nach Bedarf anpassen
+    height: auto;
+    cursor: pointer;
   }
   

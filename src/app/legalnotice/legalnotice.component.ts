@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-legalnotice',
@@ -8,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './legalnotice.component.scss'
 })
 export class LegalnoticeComponent {
+  constructor(private router: Router) {}
 
+  toggleLegalNotice(): void {
+    // Navigiere zurück zur Mainpage
+    this.router.navigate(['/']);
+  }
 }
