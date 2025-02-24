@@ -16,8 +16,8 @@
           </a>
         </div>
         <div class="legal">
-          <a href="#" class="legal-notice">Legal notice</a>
-        </div>
+          <a (click)="toggleLegalNotice()" [class.active]="isLegalNoticeOpen" class="legal-notice">legal notice</a>
+        </div>        
       </div>
     </div>
   </footer>

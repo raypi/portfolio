@@ -1,0 +1,33 @@
+.legalnotice-page {
+
+    height: calc(100vh - var(--headerHeight) - var(--footerHeight) - 78px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    padding: 20px;
+    background-color: #f9f9f9; // Optional: heller Hintergrund für bessere Lesbarkeit
+  
+    h1 {
+      font-size: 1.0rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    p {
+      font-size: 0.75rem;
+      padding: 8px;
+      position: relative;
+      overflow: hidden;
+      line-height: 1.6;
+      max-width: 800px;
+      text-align: left;
+    }
+  
+    .legal-content {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+  
