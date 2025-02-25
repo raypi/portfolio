@@ -1,39 +1,85 @@
 {
-    "hero": {
-      "titleI": "Frontend",
-      "titleII": "Entwickler",
-      "name": "Ray Don"
+  "hero": {
+    "titleI": "Frontend",
+    "titleII": "Entwickler",
+    "name": "Ray Don"
+  },
+  "about-me": {
+    "title": "Über mich",
+    "description": "Hallo! Ich bin Ray aus Rostock, ein leidenschaftlicher Webentwickler, der sich darauf konzentriert, dynamische und benutzerfreundliche Websites zu erstellen. Meine Stärken liegen im Frontend-Entwicklung mit HTML, CSS, JavaScript und Angular. Ich lege großen Wert auf sauberen, gut strukturierten Code und strebe stets nach optimalen Lösungen für komplexe Probleme. Wenn du denkst, dass ich gut zu deinem Projekt passen würde, zögere nicht, mich zu kontaktieren.",
+    "info": {
+      "location": "ansässig in Rostock",
+      "remote": "offen für Remote-Arbeit"
     },
-
-    "about-me": {
-      "hello": "hello {{value}}",
-      "title": "Translation Demo"
+    "button": "Lass uns reden"
+  },
+  "my-skills": {
+    "title": "Meine Fähigkeiten"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "Entdecke eine Auswahl meiner Arbeiten hier – interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "join": {
+      "projekt": "Beitreten",
+      "projectDescription": "Task-Manager, inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mithilfe von Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu."
     },
-
-    "my-skills": {
-      "hello": "hello {{value}}",
-      "title": "Translation Demo"
-    },
-
-    "portfolio": {
-      "hello": "hello {{value}}",
-      ",title": "Translation Demo"
-    },
-
-    "references": {
-      "hello": "hello {{value}}",
-      "title": "Translation Demo"
-    },
-
-    "say-hi": {
-      "hello": "hello {{value}}",
-      "title": "Translation Demo"
-    },
-
-    "footer": {
-      "hello": "hello {{value}}",
-      "title": "Translation Demo"
+    "elPolloLoco": {
+      "projekt": "El Pollo Loco",
+      "projectDescription": "Ein einfaches Jump-and-Run-Spiel, basierend auf einem objektorientierten Ansatz. Hilf Pepe dabei, Münzen und Flaschen zu finden, um gegen das Killerhuhn zu kämpfen."
     }
-
-
+  },
+  
+"references": {
+    "title": "Referenzen",
+    "intro": "Ich gedeihe sowohl eigenständig als auch im Team. Das sagen meine Kollegen über die Zusammenarbeit mit mir.",
+    "schuster": {
+      "name": "V. Schuster",
+      "title": "Teampartner",
+      "reference": "Ray liefert stets sauberen, effizienten Code und innovative Lösungen. Sein tiefes technisches Wissen und seine proaktive Einstellung haben unsere Projektergebnisse erheblich verbessert, was ihn zu einem äußerst wertvollen Mitarbeiter macht."
+    },
+    "mueller": {
+      "name": "J. Müller",
+      "title": "Direktor",
+      "reference": "Ray zeigt herausragende Programmierfähigkeiten und ein starkes Engagement für Qualität. Seine Fähigkeit, komplexe Probleme zu lösen und effektiv im Team zusammenzuarbeiten, macht ihn in jedem Entwicklerteam unverzichtbar."
+    },
+    "webelein": {
+      "name": "T. Webelein",
+      "title": "Teampartner",
+      "reference": "Ray ist ein hochqualifizierter Programmierer mit außergewöhnlichen analytischen Fähigkeiten. Er liefert stets zuverlässige Lösungen pünktlich, was einen reibungslosen Projektablauf gewährleistet. Seine Teamarbeit und sein Engagement sind wirklich lobenswert."
+    }
+  },
+  
+  "say-hi": {
+    "title": "Sag Hallo!",
+    "contactTitle": "Möchtest du ein neues Projekt besprechen?",
+    "formDescription": "Sag hallo! Lass uns deine Ideen besprechen und in die Tat umsetzen",
+    "placeholder": {
+      "name": "Dein Name...",
+      "email": "Deine E-Mail...",
+      "message": "Deine Nachricht..."
+    },
+    "error": {
+      "name": "Dein Name ist erforderlich",
+      "email": "Deine E-Mail ist erforderlich",
+      "message": "Deine Nachricht ist leer"
+    },
+    "checkbox": {
+      "part1": "Ich habe die",
+      "linkText": "Datenschutzerklärung",
+      "part2": "gelesen und stimme der Verarbeitung meiner Daten, wie dargelegt, zu."
+    },
+    "button": "Nachricht senden",
+    "success": "Deine Nachricht wurde erfolgreich gesendet."
+  },
+  "footer": {
+    "notice": "Rechtlicher Hinweis"
+  },
+  "legalnotice": {
+    "close": "Schließen",
+    "title": "Impressum",
+    "address": "Rainer Musch<br>Streitwalder Straße 4<br>04654 Frohburg",
+    "contact": "Kontakt",
+    "contactDetails": "Telefon: [Telefonnummer]<br>E-Mail: contact&#64;developing-sailor.com",
+    "source": "Quelle: <a href=\"https://www.e-recht24.de\" target=\"_blank\" rel=\"noopener noreferrer\">e-recht24.de</a>"
   }
+}

@@ -1,21 +1,11 @@
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
 
 interface Reference {
   name: string;
   title: string;
   reference: string;
-}
-
-interface ReferenceTranslation {
-  title: string;
-  intro: string;
-  list: Array<{
-    name: string;
-    title: string;
-    reference: string;
-  }>;
 }
 
 @Component({
@@ -25,36 +15,24 @@ interface ReferenceTranslation {
   templateUrl: './references.component.html',
   styleUrls: ['./references.component.scss']
 })
-export class ReferencesComponent implements OnInit {
+export class ReferencesComponent {
 
-  translatedReferences: ReferenceTranslation | undefined;
-
-  references: Reference[] = [
+  // Analog zu myProjekts wird hier ein Array mit Translation-Schlüsseln definiert.
+  myReferences: Reference[] = [
     { 
-      name: 'V.Schuster', 
-      title: 'references.list[0].title', 
-      reference: 'references.list[0].reference' 
+      name: 'references.schuster.name', 
+      title: 'references.schuster.title', 
+      reference: 'references.schuster.reference'
     },
     { 
-      name: 'J. Müller', 
-      title: 'references.list[1].title', 
-      reference: 'references.list[1].reference' 
+      name: 'references.mueller.name', 
+      title: 'references.mueller.title', 
+      reference: 'references.mueller.reference'
     },
     { 
-      name: 'T.Webelein', 
-      title: 'references.list[2].title', 
-      reference: 'references.list[2].reference' 
+      name: 'references.webelein.name', 
+      title: 'references.webelein.title', 
+      reference: 'references.webelein.reference'
     }
   ];
-
-  constructor(private translate: TranslateService) { }
-
-  ngOnInit(): void {
-    this.translate.get('references').subscribe((res: ReferenceTranslation) => {
-      this.translatedReferences = res;
-    });
-    
-  
-  }
 }
-

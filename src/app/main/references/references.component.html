@@ -1,18 +1,21 @@
-<div class="references" *ngIf="translatedReferences">
-  <h2>{{ translatedReferences.title }}</h2>
-  <p class="intro">{{ translatedReferences.intro }}</p>
+<div class="references">
+  <!-- Überschrift und Intro werden direkt über den Translation-Schlüssel gerendert -->
+  <h2>{{ 'references.title' | translate }}</h2>
+  <p class="intro">{{ 'references.intro' | translate }}</p>
+  
+  <!-- Das Array myReferences wird hier iteriert -->
   <div class="references-list">
-    <div class="reference-item" *ngFor="let ref of translatedReferences.list">
+    <div class="reference-item" *ngFor="let ref of myReferences">
       <div class="quote-symbol">"</div>
       <div class="ref-info">
-        <div class="ref-name">{{ ref.name }}</div>
-        <div class="ref-title">{{ ref.title }}</div>
+        <div class="ref-name">{{ ref.name | translate }}</div>
+        <div class="ref-title">{{ ref.title | translate }}</div>
       </div>
-      <div class="ref-text">{{ ref.reference }}</div>
+      <div class="ref-text">{{ ref.reference | translate }}</div>
     </div>
   </div>
+  
   <div class="references-arrow">
     <img src="assets/img/arrowleftdown.png" alt="Next Section Arrow">
   </div>
 </div>
-

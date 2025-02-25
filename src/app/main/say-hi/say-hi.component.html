@@ -1,10 +1,10 @@
 <div class="say-hi-section">
   <div class="say-hi-inner">
-    <h2>Say Hi!</h2>
+    <h2>{{ 'say-hi.title' | translate }}</h2>
     <div class="contact-form">
-      <h3>Want to discuss a new project?</h3>
+      <h3>{{ 'say-hi.contactTitle' | translate }}</h3>
       <p class="form-description">
-        Say hallo! Let’s discuss your ideas and make it happen
+        {{ 'say-hi.formDescription' | translate }}
       </p>
       <!-- Formular mit ngSubmit -->
       <form #ngForm="ngForm" (ngSubmit)="sendMessage(ngForm)">
@@ -13,7 +13,7 @@
           <input
             type="text"
             name="name"
-            placeholder="Your name..."
+            placeholder="{{ 'say-hi.placeholder.name' | translate }}"
             [(ngModel)]="contactData.name"
             (blur)="validateName()"
           />
@@ -30,7 +30,7 @@
           />
         </div>
         <div class="error-message" *ngIf="nameError">
-          Your name is required
+          {{ 'say-hi.error.name' | translate }}
         </div>
   
         <!-- Email Input -->
@@ -38,7 +38,7 @@
           <input
             type="email"
             name="email"
-            placeholder="Your email..."
+            placeholder="{{ 'say-hi.placeholder.email' | translate }}"
             pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
             [(ngModel)]="contactData.email"
             (blur)="validateEmail()"
@@ -55,14 +55,14 @@
           />
         </div>
         <div class="error-message" *ngIf="emailError">
-          Your email is required
+          {{ 'say-hi.error.email' | translate }}
         </div>
   
         <!-- Message Textarea -->
         <div class="input-group">
           <textarea
             name="message"
-            placeholder="Your Message..."
+            placeholder="{{ 'say-hi.placeholder.message' | translate }}"
             maxlength="300"
             [(ngModel)]="contactData.message"
             (blur)="validateMessage()"
@@ -80,33 +80,32 @@
           />
         </div>
         <div class="error-message" *ngIf="messageError">
-          Your Message is empty
+          {{ 'say-hi.error.message' | translate }}
         </div>
-      
-      
-      <!-- Checkbox (außerhalb des Formulars) -->
-      <div class="checkbox-group">
-        <input
-          type="checkbox"
-          id="privacy"
-          name="privacy"
-          [(ngModel)]="privacyAccepted"
-        />
-        <label for="privacy">
-          {{ 'say-hi.checkbox.part1' | translate }}
-          <a href="#">{{ 'say-hi.checkbox.linkText' | translate }}</a>
-          {{ 'say-hi.checkbox.part2' | translate }}
-        </label>
-      </div>
   
-      <!-- Send Message Button -->
-      <button type="submit" [disabled]="!isFormValid()">
-        Send Message
-      </button>
-      <div *ngIf="successMessage" class="success-message">
-        {{ successMessage }}
-      </div>
-    </form>
+        <!-- Checkbox (außerhalb des Formulars) -->
+        <div class="checkbox-group">
+          <input
+            type="checkbox"
+            id="privacy"
+            name="privacy"
+            [(ngModel)]="privacyAccepted"
+          />
+          <label for="privacy">
+            {{ 'say-hi.checkbox.part1' | translate }}
+            <a href="#">{{ 'say-hi.checkbox.linkText' | translate }}</a>
+            {{ 'say-hi.checkbox.part2' | translate }}
+          </label>
+        </div>
+  
+        <!-- Send Message Button -->
+        <button type="submit" [disabled]="!isFormValid()">
+          {{ 'say-hi.button' | translate }}
+        </button>
+        <div *ngIf="successMessage" class="success-message">
+          {{ 'say-hi.success' | translate }}
+        </div>
+      </form>
     </div>
   </div>
 </div>

@@ -33,27 +33,29 @@
     },
 
 
- "references": {
-  "title": "Referenzen",
-  "intro": "I thrive both independently and as Part of a Team. Here's what my colleagues have to say about working with me.",
-  "list": [
-    {
-      "name": "V.Schuster",
-      "title": "Team Partner",
-      "reference": "Ray consistently delivers clean, efficient code and innovative solutions. His deep technical knowledge and proactive attitude greatly enhanced our project outcomes, making him a highly valuable asset."
+    
+    "references": {
+      "title": "References",
+      "intro": "I thrive both independently and as part of a team. This is what my colleagues say about working with me.",
+      "schuster": {
+        "name": "V. Schuster",
+        "title": "Team Partner",
+        "reference": "Ray always delivers clean, efficient code and innovative solutions. His deep technical knowledge and proactive attitude have greatly improved our project outcomes, making him an extremely valuable employee."
+      },
+      "mueller": {
+        "name": "J. Müller",
+        "title": "Director",
+        "reference": "Ray demonstrates outstanding programming skills and a strong commitment to quality. His ability to solve complex problems and collaborate effectively makes him indispensable in any development team."
+      },
+      "webelein": {
+        "name": "T. Webelein",
+        "title": "Team Partner",
+        "reference": "Ray is a highly skilled programmer with exceptional analytical abilities. He consistently delivers reliable solutions on time, ensuring smooth project execution. His teamwork and dedication are truly commendable."
+      }
     },
-    {
-      "name": "J. Müller",
-      "title": "Director",
-      "reference": "Ray demonstrates outstanding programming skills and a strong commitment to quality. His ability to solve complex problems and collaborate effectively makes him indispensable in any development team."
-    },
-    {
-      "name": "T.Webelein",
-      "title": "Team Partner",
-      "reference": "Ray is a highly skilled programmer with exceptional analytical abilities. He consistently delivers reliable solutions on time, ensuring smooth project execution. His teamwork and dedication are truly commendable."
-    }
-  ]
-},
+  
+    
+    
 
 
 
@@ -95,5 +97,4 @@
   "source": "Source: <a href=\"https://www.e-recht24.de\" target=\"_blank\" rel=\"noopener noreferrer\">e-recht24.de</a>"
 }
 
-
-  }
+ }
