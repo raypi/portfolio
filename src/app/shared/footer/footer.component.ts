@@ -15,9 +15,9 @@ export class FooterComponent {
   isLegalNoticeOpen = false;
 
   socialMedia = [
-    { img: 'assets/img/6. footerlinkedin.png', link: '#' },
-    { img: 'assets/img/4. footergithub.png', link: '#' },
-    { img: 'assets/img/5. footeremail.png', link: '#' }
+    { img: 'assets/img/6. footerlinkedin.png', link: 'https://linkedin.com/in/rmudevsailor' },
+    { img: 'assets/img/4. footergithub.png', link: 'https://github.com/raypi/' },
+    { img: 'assets/img/5. footeremail.png', link: 'mailto:rainer.musch@icloud.com' }
   ];
 
   constructor(private router: Router) {}

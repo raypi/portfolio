@@ -3,11 +3,12 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-say-hi',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslatePipe, TranslateDirective],
+  imports: [CommonModule, FormsModule, TranslatePipe, TranslateDirective, RouterModule],
   templateUrl: './say-hi.component.html',
   styleUrls: ['./say-hi.component.scss']
 })
@@ -97,6 +98,12 @@ export class SayHiComponent {
         }, 5000);
       }
     }
+  }
+
+  constructor(private router: Router) {}
+
+  navigateToLegalNotice() {
+    this.router.navigate(['/legalnotice'], { fragment: 'legal-notice' });
   }
     
 }

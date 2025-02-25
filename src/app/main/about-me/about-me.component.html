@@ -1,4 +1,4 @@
-<div class="about-me">
+<div class="about-me" id="about-me">
   <div class="about-me-content">
     <div class="about-me-left">
       <h2>{{ 'about-me.title' | translate }}</h2>
@@ -15,13 +15,17 @@
           <span>{{ 'about-me.info.remote' | translate }}</span>
         </div>
       </div>
-      <button class="talk-button">{{ 'about-me.button' | translate }}</button>
+      <a href="#say-hi-section">
+        <button class="talk-button">{{ 'about-me.button' | translate }}</button>
+      </a>
     </div>
     <div class="about-me-right">
       <img src="assets/img/photo.png" alt="Photo of Ray">
     </div>
   </div>
   <div class="about-me-arrow">
+    <a href="#my-skills">
     <img src="assets/img/arrowleftdown.png" alt="Arrow">
+  </a>
   </div>
 </div>

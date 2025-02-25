@@ -134,12 +134,11 @@
     }
 
     a {
-      width: 100px;
-      text-align: center;
+      display: inline-block;
       color: #00BC8F;
       text-decoration: none;
-      display: inline-block;
       transition: transform 0.3s ease;
+      margin: 0 8px;
     }
 
     a:hover {

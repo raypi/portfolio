@@ -1,4 +1,5 @@
 .legalnotice-page {
+    scroll-margin-top: 150px;
     position: relative; // Notwendig für absolute Positionierung des Icons
     height: calc(100vh - var(--headerHeight) - var(--footerHeight) - 78px);
     display: flex;

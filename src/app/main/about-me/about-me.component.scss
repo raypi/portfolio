@@ -2,6 +2,7 @@
   padding: 20px;
   margin-bottom: 100px;
   position: relative;
+  scroll-margin-top: 150px;
   
   .about-me-content {
     display: flex;
@@ -28,6 +29,10 @@
         font-size: 1rem;
       }
       
+      a {
+        text-decoration: none;
+      }
+
       // Info-Bereich mit den Grafiken
       .about-me-info {
         margin-bottom: 24px;

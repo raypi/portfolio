@@ -22,7 +22,7 @@ import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-transl
 export class AppComponent {
   title = 'Portfolio';
   constructor(private translate: TranslateService) {
-    this.translate.addLangs(['de', 'en']);
+    this.translate.addLangs(['de', 'en', 'es', 'ru']);
     this.translate.setDefaultLang('en');
     this.translate.use('en');
   }

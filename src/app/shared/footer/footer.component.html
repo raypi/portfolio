@@ -11,8 +11,8 @@
       </div>
       <div class="footer-right">
         <div class="social-media">
-          <a *ngFor="let item of socialMedia" [href]="item.link">
-            <img [src]="item.img" [alt]="item.link" />
+          <a *ngFor="let item of socialMedia" [href]="item.link" target="_blank" rel="noopener noreferrer">
+            <img [src]="item.img" [alt]="item.link">
           </a>
         </div>
         <div class="legal">

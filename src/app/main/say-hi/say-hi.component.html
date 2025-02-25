@@ -1,4 +1,4 @@
-<div class="say-hi-section">
+<div class="say-hi-section" id="say-hi-section">
   <div class="say-hi-inner">
     <h2>{{ 'say-hi.title' | translate }}</h2>
     <div class="contact-form">
@@ -92,10 +92,12 @@
             [(ngModel)]="privacyAccepted"
           />
           <label for="privacy">
-            {{ 'say-hi.checkbox.part1' | translate }}
-            <a href="#">{{ 'say-hi.checkbox.linkText' | translate }}</a>
-            {{ 'say-hi.checkbox.part2' | translate }}
-          </label>
+            <span>{{ 'say-hi.checkbox.part1' | translate }}</span>
+            <span class="privacy-link">
+              <a [routerLink]="['/legalnotice']">{{ 'say-hi.checkbox.linkText' | translate }}</a>
+            </span>
+            <span>{{ 'say-hi.checkbox.part2' | translate }}</span>
+          </label>          
         </div>
   
         <!-- Send Message Button -->
