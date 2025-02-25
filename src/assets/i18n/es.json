@@ -1,84 +1,90 @@
 {
-    "hero": {
-      "titleI": "Frontend",
-      "titleII": "Developer",
-      "name": "Ray Don"
+  "hero": {
+    "titleI": "Frontend",
+    "titleII": "Desarrollador",
+    "name": "Ray Don"
+  },
+  "about-me": {
+    "title": "Sobre mí",
+    "description": "¡Hola! Soy Ray de Rostock, un apasionado desarrollador web enfocado en crear sitios web dinámicos y fáciles de usar. Mis fortalezas se encuentran en el desarrollo frontend con HTML, CSS, JavaScript y Angular. Prioritizo un código limpio y bien estructurado y siempre busco soluciones óptimas para problemas complejos. Si crees que puedo ser una buena opción para tu proyecto, no dudes en contactarme.",
+    "info": {
+      "location": "basado en Rostock",
+      "remote": "dispuesto a trabajar de forma remota"
     },
-    "about-me": {
-      "title": "Sobre mí",
-      "description": "¡Hola! Soy Ray de Rostock, un apasionado desarrollador web enfocado en crear sitios web dinámicos y fáciles de usar. Mis fortalezas residen en el desarrollo frontend con HTML, CSS, JavaScript y Angular. Priorizo un código limpio y bien estructurado, y siempre busco soluciones óptimas para problemas complejos. Si crees que podría ser una buena opción para tu proyecto, no dudes en contactarme.",
-      "info": {
-        "location": "con base en Rostock",
-        "remote": "dispuesto a trabajar de forma remota"
-      },
-      "button": "Hablemos"
+    "button": "Hablemos"
+  },
+  "my-skills": {
+    "title": "Mis habilidades"
+  },
+  "portfolio": {
+    "title": "Portafolio",
+    "description": "Explora una selección de mi trabajo aquí - Interactúa con los proyectos para ver mis habilidades en acción.",
+    "join": {
+      "projekt": "Unirse",
+      "projectDescription": "Administrador de tareas inspirado en el sistema Kanban. Crea y organiza tareas utilizando funciones de arrastrar y soltar, y asigna usuarios y categorías."
     },
-    "my-skills": {
-      "title": "Mis habilidades"
-    },
-    "portfolio": {
-      "title": "Portafolio",
-      "description": "Explora una selección de mis trabajos aquí - Interactúa con los proyectos para ver mis habilidades en acción.",
-      "join": {
-        "projekt": "Únete",
-        "projectDescription": "Administrador de tareas inspirado en el sistema Kanban. Crea y organiza tareas utilizando funciones de arrastrar y soltar, asigna usuarios y categorías."
-      },
-      "elPolloLoco": {
-        "projekt": "El Pollo Loco",
-        "projectDescription": "Un juego simple de plataformas basado en un enfoque orientado a objetos. Ayuda a Pepe a encontrar monedas y botellas para luchar contra el pollo asesino."
-      }
-    },
-    "references": {
-      "title": "Referencias",
-      "intro": "Me desempeño tanto de manera independiente como en equipo. Esto es lo que dicen mis colegas sobre trabajar conmigo.",
-      "schuster": {
-        "name": "V. Schuster",
-        "title": "Compañero de equipo",
-        "reference": "Ray siempre entrega código limpio, eficiente e innovador. Su profundo conocimiento técnico y actitud proactiva han mejorado significativamente los resultados de nuestros proyectos, haciéndolo un empleado sumamente valioso."
-      },
-      "mueller": {
-        "name": "J. Müller",
-        "title": "Director",
-        "reference": "Ray demuestra habilidades de programación excepcionales y un fuerte compromiso con la calidad. Su capacidad para resolver problemas complejos y colaborar de manera efectiva lo hace indispensable en cualquier equipo de desarrollo."
-      },
-      "webelein": {
-        "name": "T. Webelein",
-        "title": "Compañero de equipo",
-        "reference": "Ray es un programador altamente capacitado con habilidades analíticas excepcionales. Consistentemente entrega soluciones confiables a tiempo, asegurando una ejecución fluida del proyecto. Su trabajo en equipo y dedicación son realmente encomiables."
-      }
-    },
-    "say-hi": {
-      "title": "¡Saluda!",
-      "contactTitle": "¿Quieres discutir un nuevo proyecto?",
-      "formDescription": "¡Di hola! Discutamos tus ideas y hagámoslo realidad",
-      "placeholder": {
-        "name": "Tu nombre...",
-        "email": "Tu correo...",
-        "message": "Tu mensaje..."
-      },
-      "error": {
-        "name": "Tu nombre es obligatorio",
-        "email": "Tu correo es obligatorio",
-        "message": "Tu mensaje está vacío"
-      },
-      "checkbox": {
-        "part1": "He leído la",
-        "linkText": "política de privacidad",
-        "part2": "y acepto el procesamiento de mis datos como se describe."
-      },
-      "button": "Enviar mensaje",
-      "success": "Tu mensaje ha sido enviado exitosamente."
-    },
-    "footer": {
-      "notice": "Aviso Legal"
-    },
-    "legalnotice": {
-      "close": "Cerrar",
-      "title": "Aviso Legal",
-      "address": "Rainer Musch<br>Streitwalder Straße 4<br>04654 Frohburg",
-      "contact": "Contacto",
-      "contactDetails": "Teléfono: [Número de teléfono]<br>Correo electrónico: contact&#64;developing-sailor.com",
-      "source": "Fuente: <a href=\"https://www.e-recht24.de\" target=\"_blank\" rel=\"noopener noreferrer\">e-recht24.de</a>"
+    "elPolloLoco": {
+      "projekt": "El Pollo Loco",
+      "projectDescription": "Un sencillo juego de plataformas basado en un enfoque orientado a objetos. Ayuda a Pepe a encontrar monedas y botellas para combatir al pollo asesino."
     }
+  },
+  "references": {
+    "title": "Referencias",
+    "intro": "Me destaco tanto de forma independiente como en equipo. Esto es lo que dicen mis colegas sobre trabajar conmigo.",
+    "schuster": {
+      "name": "V. Schuster",
+      "title": "Compañero de equipo",
+      "reference": "Ray siempre entrega código limpio, eficiente y soluciones innovadoras. Su profundo conocimiento técnico y actitud proactiva han mejorado enormemente los resultados de nuestros proyectos, lo que lo convierte en un empleado sumamente valioso."
+    },
+    "mueller": {
+      "name": "J. Müller",
+      "title": "Director",
+      "reference": "Ray demuestra habilidades de programación excepcionales y un fuerte compromiso con la calidad. Su capacidad para resolver problemas complejos y colaborar de manera efectiva lo hace indispensable en cualquier equipo de desarrollo."
+    },
+    "webelein": {
+      "name": "T. Webelein",
+      "title": "Compañero de equipo",
+      "reference": "Ray es un programador altamente calificado con habilidades analíticas excepcionales. Constantemente entrega soluciones confiables a tiempo, garantizando la ejecución fluida de los proyectos. Su trabajo en equipo y dedicación son realmente encomiables."
+    }
+  },
+  "say-hi": {
+    "title": "¡Saluda!",
+    "contactTitle": "¿Quieres hablar de un nuevo proyecto?",
+    "formDescription": "¡Di hola! Discutamos tus ideas y hagámoslas realidad.",
+    "placeholder": {
+      "name": "Tu nombre...",
+      "email": "Tu correo electrónico...",
+      "message": "Tu mensaje..."
+    },
+    "error": {
+      "name": "Tu nombre es obligatorio",
+      "email": "Tu correo electrónico es obligatorio",
+      "message": "Tu mensaje está vacío"
+    },
+    "checkbox": {
+      "part1": "He leído la",
+      "linkText": "política de privacidad",
+      "part2": "y acepto el tratamiento de mis datos según lo expuesto."
+    },
+    "button": "Enviar mensaje",
+    "success": "Tu mensaje ha sido enviado exitosamente."
+  },
+  "footer": {
+    "notice": "Aviso legal"
+  },
+  "legalnotice": {
+    "close": "cerrar",
+    "title": "Aviso legal",
+    "address": "Rainer Musch<br>Streitwalder Straße 4<br>04654 Frohburg",
+    "contact": "Contacto",
+    "contactDetails": "Teléfono: [Número de teléfono]<br>E-Mail: contact&#64;developing-sailor.com",
+    "source": "Fuente: <a href=\"https://www.e-recht24.de\" target=\"_blank\" rel=\"noopener noreferrer\">e-recht24.de</a>",
+    "title2": "política de privacidad",
+    "privacypolicy": "La privacidad y la seguridad dependen de la encriptación, la regulación y el consentimiento del usuario."
+  },
+  "menu": {
+    "aboutme": "Sobre mí",
+    "myskills": "Mis habilidades",
+    "portfolio": "Portafolio"
   }
-  
+}
