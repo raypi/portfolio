@@ -27,7 +27,7 @@
 
     .portfolio-col {
       flex: 1;
-      padding: 10px;
+      padding: 24px;
     }
 
     .image-col {
@@ -139,7 +139,7 @@
       }
 
       &:hover::before {
-        transform: translateY(-50%) rotate(-120deg); /* Pfeil nach links drehen */
+        transform: translateY(-50%) rotate(+120deg); /* Pfeil nach links drehen */
         opacity: 1; /* Pfeil sichtbar machen */
       }
     }

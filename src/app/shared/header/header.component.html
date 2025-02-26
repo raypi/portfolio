@@ -1,13 +1,19 @@
 <header>
   <div class="header-content">
-    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="80">
-      <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
-            font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="black">
-        [ R M ]
-      </text>
-    </svg>
+    <!-- Logo-Link mit SVG -->
+    <a href="#hero" class="logo-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="80">
+        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+              font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="black">
+          [ R M ]
+        </text>
+      </svg>
+    </a>
+
+    <!-- Header-Controls (Sprachen & Burger-Menü) -->
     <div class="header-controls">
       <div class="language-selector">
+        <!-- Angular-Beispiel: Schleife über languages -->
         @for (lang of languages; track $index) {
           <a href="#"
              class="language-item"
@@ -17,10 +23,12 @@
           </a>
         }
       </div>
+
       <img class="burger-menu"
-            [src]="isMenuOpen ? 'assets/img/xicon.png' : 'assets/img/burgermenue.png'"
-            alt="burger menu"
-            (click)="toggleMenu()">
+           [src]="isMenuOpen ? 'assets/img/xicon.png' : 'assets/img/burgermenue.png'"
+           alt="burger menu"
+           (click)="toggleMenu()">
     </div>
   </div>
 </header>
+

@@ -125,6 +125,7 @@ header {
   background-color: var(--backgroundColor);
 
   .main-content {
+    scroll-behavior: smooth;
     width: 100%;
   }
 
