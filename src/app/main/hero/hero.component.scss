@@ -1,5 +1,5 @@
 .hero {
-  position: relative; // Für die absolute Positionierung der E-Mail
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +12,7 @@
     h1 {
       margin: 0;
       line-height: 1.2;
-      font-size: 6rem; 
+      font-size: 6rem;
     }
   }
 
@@ -46,102 +46,80 @@
   .hero-footer {
     margin-top: 30px;
     width: 100%;
-    position: relative; // Basis für absolute Positionierung
     padding: 0 20px;
-  
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-  
+
     .hero-email {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translate(-30%, -50%) rotate(-90deg);
-      white-space: nowrap;
       font-size: 1rem;
+      white-space: nowrap;
+      transform: rotate(-90deg);
     }
-  
-    // Beide Elemente werden übereinander gelegt:
+
     .scroll-arrow {
-      position: absolute;
-      right: -15px;  // Position des Pfeil am Rand
-      // bottom: -70px; // Ausgangsposition
-      z-index: 1;   // Liegt hinter dem Text
       animation: arrowSlideFade 2s ease-in-out infinite;
     }
-  
+
     .scroll-text {
-      height: 180px;
-      width: 100px;
-      background-color: var(--backgroundColor);
-      position: absolute;
       text-align: center;
-      right: -10px;
-      bottom: -250px;
-      z-index: 2;   // Bleibt stets über dem Pfeil
-      padding: 0 4px;
       font-size: 1rem;
     }
   }
 
-  /* Keyframes für den Pfeil */
-@keyframes arrowSlideFade {
-  0% {
-    transform: translateY(-50px);
-    opacity: 1;
+  @keyframes arrowSlideFade {
+    0% {
+      transform: translateY(-50px);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    70% {
+      transform: translateY(+200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(+200px);
+      opacity: 0;
+    }
   }
-  50% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  70% {
-    transform: translateY(+200px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(+200px);
-    opacity: 0;
-  }
-}
 
+  @media (min-width: 318px) and (max-width: 767px) {
+    .hero-title h1 {
+      font-size: 2.5rem;
+    }
+    .hero {
+      padding: 15px;
 
-
-/* Responsive Anpassungen für Telefonmodus */
-@media (min-width: 318px) and (max-width: 767px) { 
-  
-  .hero-title h1 {
-    font-size: 2.5rem;
-  }
-  .hero {
-    padding: 15px;
-
-    .hero-subtitle {
-      .line-with-name {
-        width: 80%; // Größere Breite, damit die Linie nicht zu kurz wird
+      .hero-subtitle .line-with-name {
+        width: 80%;
         justify-content: center;
 
         .line {
-          flex: 2; // Längere Linie für bessere Optik
+          flex: 2;
         }
 
         .name {
           font-size: 1.3rem;
         }
       }
-    }
 
-    .hero-footer {
-      .hero-email {
-        font-size: 0.9rem;
-      }
+      .hero-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
 
-      .hero-scroll {
-        img {
-          max-width: 40px; // Kleineres Scroll-Icon
+        .hero-email {
+          font-size: 0.9rem;
+          transform: none;
+        }
+
+        .scroll-arrow img {
+          max-width: 40px;
         }
       }
     }
   }
-}
 }
