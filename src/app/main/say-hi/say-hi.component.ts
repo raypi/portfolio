@@ -105,6 +105,14 @@ export class SayHiComponent {
   navigateToLegalNotice() {
     this.router.navigate(['/legalnotice'], { fragment: 'legal-notice' });
   }
+
+  scrollToHero(): void {
+    const heroSection = document.getElementById('hero');
+    if (heroSection) {
+      heroSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+  
     
 }
 

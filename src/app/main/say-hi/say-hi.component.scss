@@ -1,10 +1,11 @@
 .say-hi-section {
-  width: 100%;
+  width: 100vw;
   margin-left: calc(-50vw + 50%);
   background-color: black;
   clip-path: polygon(0 0, 100% 200px, 100% 100%, 0 100%);
   overflow: hidden;
-  padding-bottom: 40px; // extra Platz am unteren Rand
+  padding-bottom: 40px;
+  position: relative;
 }
 
 /* Der innere Container begrenzt den Content für responsives Layout */
@@ -20,57 +21,43 @@
   }
 }
 
-/* Kontaktformular */
-.contact-form {
-  text-align: center;
+.input-group {
+  position: relative;
+  margin: 10px auto;
+  width: 350px;
 
-  h3 {
-    color: #00BC8F;
-    margin-bottom: 10px;
+  input,
+  textarea {
+    width: 100%;
+    background: transparent;
+    border: 2px solid transparent; // Fester Rahmen, unsichtbar durch transparent
+    border-bottom-color: white;     // Nur der untere Rand sichtbar
+    color: white;
+    padding: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;         // Border und Padding werden in der Breite berücksichtigt
+    transition: border-color 0.3s ease; // Nur die Farbe wird animiert
+    outline: none;    
   }
 
-  .form-description {
-    margin: 0 auto 20px;
-    display: inline-block;
+  input:hover,
+  textarea:hover,
+  input:focus,
+  textarea:focus {
+    border-color: white; 
+    outline: none;    
   }
 
-  .input-group {
-    position: relative;
-    margin: 10px auto;
-    width: 350px;
-
-    input,
-    textarea {
-      width: 100%;
-      background: transparent;
-      border: none;
-      border-bottom: 2px solid white;
-      color: white;
-      padding: 5px;
-      font-size: 1rem;
-      transition: border 0.3s ease;
-    }
-
-    input:hover,
-    textarea:hover {
-      border: 2px solid white;
-    }
-
-    input:focus,
-    textarea:focus {
-      outline: none;
-      border: 2px solid white;
-    }
-
-    img {
-      position: absolute;
-      right: -40px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 20px;
-      height: 20px;
-    }
+  img {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
   }
+}
+
 
   .success-message {
     margin-top: 20px;
@@ -148,6 +135,8 @@
   }
 
   button {
+    display: block;           
+    margin: 20px auto 0;     
     border: 2px solid gray;
     padding: 8px 32px;
     background: transparent;
@@ -155,7 +144,6 @@
     cursor: not-allowed;
     font-weight: bold;
     transition: all 0.3s;
-    margin-top: 20px;
   }
 
   button:enabled {
@@ -163,7 +151,31 @@
     color: white;
     cursor: pointer;
   }
-}
+
+  .scroll-to-hero {
+    position: absolute;
+    right: 250px;      // Abstand vom rechten Rand (anpassen nach Bedarf)
+    top: 90%;         // Vertikale Position, hier mittig
+    transform: translateY(-50%);  // Korrektur, damit das Element wirklich mittig sitzt
+    
+    button {
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      
+      img {
+        transition: transform 0.3s ease;
+        transform-origin: bottom center;
+      }
+      
+      &:hover img {
+        transform: scale(1.5);
+      }
+    }
+  }
+  
+
 
 @media (min-width: 768px) and (max-width: 819px) {
   .say-hi-section {
