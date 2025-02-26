@@ -1,9 +1,9 @@
 <div class="main">
     <div class="main-content">
         <div class="menu-page">
-            <a href="#about-me">{{ 'menu.aboutme' | translate }}</a>
-            <a href="#my-skills">{{ 'menu.myskills' | translate }}</a>
-            <a href="#portfolio">{{ 'menu.portfolio' | translate }}</a>
-        </div>
+            <a (click)="closeMenu()" href="#about-me">{{ 'menu.aboutme' | translate }}</a>
+            <a (click)="closeMenu()" href="#my-skills">{{ 'menu.myskills' | translate }}</a>
+            <a (click)="closeMenu()" href="#portfolio">{{ 'menu.portfolio' | translate }}</a>
+          </div>                  
     </div>
 </div>
