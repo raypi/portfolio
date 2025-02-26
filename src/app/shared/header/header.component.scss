@@ -87,11 +87,21 @@
   .header-content {
     padding: 0 24px;
   }
+  // .language-selector {
+  //   display: none;
+  // }
+
   .language-selector {
-    display: none;
+    gap: 8px;
   }
+ 
+
+
 }
 
 .xitem {
   filter: brightness(0) saturate(100%);
 }
+
+
+

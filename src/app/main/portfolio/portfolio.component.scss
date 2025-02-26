@@ -161,6 +161,13 @@
       .image-col {
         max-width: 490px;
         width: auto;
+        height: auto; // Hier wird die Höhe an den Inhalt angepasst
+
+        img {
+          width: 100%;
+          max-width: 300px; // Maximale Breite von 300px
+          height: auto;
+        }
 
         &::before {
           display: none; /* Pfeil in der mobilen Ansicht ausblenden */
@@ -170,6 +177,7 @@
       .info-col {
         order: 2;
         text-align: start;
+        opacity: 1 !important; // Info-Spalte immer anzeigen
       }
     }
   }

@@ -105,6 +105,16 @@
 
 // Media Query für Viewports von ca. 319px Breite, sodass genau 3 Skill-Items nebeneinander passen
 @media (min-width: 318px) and (max-width: 767px) {
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .skills-container h2 {
+    top: -5% !important;
+    
+  }
+
   .my-skills {
     .skills-grid {
       gap: 10px; /* Fester, kleiner Abstand */

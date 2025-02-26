@@ -67,8 +67,8 @@ export class HeaderComponent {
   languages = [
     { language: 'English', img: 'assets/img/flackeGb.png', code: 'en', active: true },
     { language: 'German', img: 'assets/img/flackeGermany.png', code: 'de', active: false },
-    { language: 'Spanish', img: 'assets/img/flackeSpain.png', code: 'es', active: false },
-    { language: 'Russian', img: 'assets/img/flackeRussia.png', code: 'ru', active: false }
+    // { language: 'Spanish', img: 'assets/img/flackeSpain.png', code: 'es', active: false },
+    // { language: 'Russian', img: 'assets/img/flackeRussia.png', code: 'ru', active: false }
   ];
 
   constructor(
