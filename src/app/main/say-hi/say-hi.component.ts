@@ -73,7 +73,7 @@ export class SayHiComponent {
           this.post.options
         ).subscribe({
           next: (response) => {
-            console.info('Response:', response);
+            
             this.successMessage = 'Ihre Nachricht wurde erfolgreich gesendet.';
             ngForm.resetForm();
             this.privacyAccepted = false; // Checkbox zurücksetzen
@@ -83,12 +83,12 @@ export class SayHiComponent {
             }, 5000);
           },
           error: (error) => {
-            console.error(error);
+            
           },
           complete: () => console.info('send post complete'),
         });
       } else {
-        console.info('Testmodus aktiviert. Folgende Daten wurden erfasst:', this.contactData);
+        
         this.successMessage = 'Ihre Nachricht wurde erfolgreich gesendet (Testmodus).';
         ngForm.resetForm();
         this.privacyAccepted = false; // Checkbox zurücksetzen
