@@ -123,6 +123,7 @@ header {
   justify-content: center;
   align-items: center;
   background-color: var(--backgroundColor);
+  scroll-margin-top: 120px;
 
   .main-content {
     scroll-behavior: smooth;
