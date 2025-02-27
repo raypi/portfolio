@@ -7,8 +7,15 @@
   text-align: center;
   padding: 24px;
   overflow: hidden;
-  height: calc(100dvh - 150px);
+  height: calc(100dvh - 190px);
   scroll-margin-top: 120px;
+
+  .hero-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0; // Kein zusätzlicher Zwischenraum – passt den Wert ggf. an, falls ein kleiner Abstand gewünscht ist.
+  }
+
 
   .hero-title {
     h1 {
@@ -57,6 +64,7 @@
 
     .hero-email {
       margin-top: auto;
+      margin-bottom: 5px;
       font-size: 1rem;
       white-space: nowrap;
       transform: rotate(-90deg);
@@ -65,6 +73,7 @@
     /* Container, um Arrow und Text übereinander zu platzieren */
     .scroll-container {
       position: relative;
+      height: 100%;
       width: 80px;  
       height: 200px; 
       overflow: hidden; 
@@ -76,7 +85,7 @@
       /* Der Pfeil selbst */
       .scroll-arrow {
         position: absolute;
-        top: -40px; /* Start über dem Container */
+        top: 0px; /* Start über dem Container */
         left: 50%;
         transform: translateX(-50%);
         z-index: 1; /* Pfeil hinter dem Text, wenn Text z-index > 1 */
@@ -90,7 +99,7 @@
       /* Scroll-Text am unteren Rand */
       .scroll-text {
         z-index: 2; 
-        background-color: #fff; 
+        background-color: var(--backgroundColor); 
         text-align: center;
         font-size: 1rem;
         padding: 0 8px;
