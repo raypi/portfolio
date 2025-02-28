@@ -45,7 +45,6 @@
   img {
     width: 30px;
     height: 20px;
-    height: auto;
   }
 
   &.active::after {
@@ -85,23 +84,22 @@
 
 @media (min-width: 318px) and (max-width: 767px) {
   .header-content {
-    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
   }
-  // .language-selector {
-  //   display: none;
-  // }
 
   .language-selector {
-    gap: 8px;
+    gap: 8px; /* Reduziertes gap zwischen den Sprach-Icons */
+    margin-right: 16px; /* Margin entfernen, damit der Selector nur den benötigten Raum einnimmt */
   }
- 
 
+  .xitem {
+    filter: brightness(0) saturate(100%);
+  }
+}  
 
-}
-
-.xitem {
-  filter: brightness(0) saturate(100%);
-}
 
 
 
