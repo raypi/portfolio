@@ -85,7 +85,7 @@ export class SayHiComponent {
           error: (error) => {
             
           },
-          complete: () => console.info('send post complete'),
+          // complete: () => console.info('send post complete'),
         });
       } else {
         
