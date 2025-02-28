@@ -1,6 +1,14 @@
+.my-skills-anchor {
+  display: block;
+  height: 0;
+  margin-top: calc(-1 * (var(--headerHeight) + 120px));
+  padding-top: calc(var(--headerHeight) + 120px);
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .my-skills {
   margin-bottom: 100px;
-  scroll-margin-top: 160px !important;
   h2{
     transition: color 0.3s; // sorgt für sanften Übergang der Farbe
     &:hover {
@@ -139,4 +147,3 @@
     }
   }
 }
-

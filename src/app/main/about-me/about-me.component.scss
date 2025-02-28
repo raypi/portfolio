@@ -1,9 +1,19 @@
+.about-me-anchor {
+  display: block;
+  height: 0;
+  margin-top: calc(-1 * (var(--headerHeight) - 120px));
+  padding-top: calc(var(--headerHeight) - 120px);
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .about-me {
   padding: 20px;
   margin-bottom: 100px;
   position: relative;
-  
-  
+  height: calc(100dvh - var(--headerHeight));
+  position: relative;
+  scroll-margin-top: calc(var(--headerHeight) + 120px);
   
   .about-me-content {
     display: flex;
@@ -20,7 +30,6 @@
         margin-top: 150px !important;
         font-size: 2rem;
         transition: color 0.3s; // sorgt für sanften Übergang der Farbe
-        scroll-margin-top: 150px !important;
         &:hover {
           color: #00BC8F;
         }

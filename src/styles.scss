@@ -42,8 +42,9 @@ h3 {
 
 
 html {
-  min-height: 100vh;
+  min-height: 100dvh;
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--headerHeight) + 120px);
 }
 
 body {
@@ -124,7 +125,7 @@ header {
   justify-content: center;
   align-items: center;
   background-color: var(--backgroundColor);
-  scroll-margin-top: 120px;
+  scroll-margin-top: calc(var(--headerHeight) + 120px);
 
   .main-content {
     scroll-behavior: smooth;

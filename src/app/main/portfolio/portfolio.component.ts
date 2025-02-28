@@ -24,14 +24,14 @@ export class PortfolioComponent {
       projekt: 'portfolio.join.projekt',
       skills: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
       projectDescription: 'portfolio.join.projectDescription',
-      links: { live: '#', github: 'https://github.com/raypi/pokedex' },
+      links: { live: 'http://rainer-musch.developerakademie.net/012_EPL/index.html', github: 'https://github.com/raypi/pokedex' },
       img: 'assets/img/projectjoin.png'
     },
     {
       projekt: 'portfolio.elPolloLoco.projekt',
       skills: ['JavaScript', 'HTML', 'CSS'],
       projectDescription: 'portfolio.elPolloLoco.projectDescription',
-      links: { live: '#', github: 'https://github.com/raypi/el_pollo_locco' },
+      links: { live: 'http://rainer-musch.developerakademie.net/012_EPL/index.html', github: 'https://github.com/raypi/el_pollo_locco' },
       img: 'assets/img/projectelpolloloco.png'
     }
   ];

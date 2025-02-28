@@ -1,7 +1,15 @@
+.portfolio-anchor {
+  display: block;
+  height: 0;
+  margin-top: calc(-1 * (var(--headerHeight) + 120px));
+  padding-top: calc(var(--headerHeight) + 120px);
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .portfolio {
   text-align: center;
   padding: 20px;
-  scroll-margin-top: 120px;
 
   h2 {
     margin-bottom: 10px;
