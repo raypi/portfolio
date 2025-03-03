@@ -1,6 +1,6 @@
-<header>
+<!-- <header>
   <div class="header-content">
-    <!-- Logo-Link mit SVG -->
+  
     <a href="#hero" class="logo-link">
       <svg xmlns="http://www.w3.org/2000/svg" width="100" height="80">
         <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
@@ -10,10 +10,10 @@
       </svg>
     </a>
 
-    <!-- Header-Controls (Sprachen & Burger-Menü) -->
+    
     <div class="header-controls">
       <div class="language-selector">
-        <!-- Angular-Beispiel: Schleife über languages -->
+      
         @for (lang of languages; track $index) {
           <a href="#"
              class="language-item"
@@ -30,5 +30,39 @@
       (click)="toggleMenu()">
     </div>
   </div>
-</header>
+</header> -->
 
+<header>
+  <div class="header-content">
+    <!-- Logo-Link -->
+    <a href="#hero" class="logo-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="80">
+        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+              font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="black">
+          [ R M ]
+        </text>
+      </svg>
+    </a>
+
+    <!-- Header-Controls: Sprache und Burger-Menü -->
+    <div class="header-controls">
+      <div class="language-selector">
+        <!-- Schleife über Sprachen -->
+        @for (lang of languages; track $index) {
+          <a href="#"
+             class="language-item"
+             [class.active]="lang.active"
+             (click)="onLanguageSelect(lang, $event)">
+            <img [src]="lang.img" [alt]="lang.language">
+          </a>
+        }
+      </div>
+
+      <!-- Burger-Menü Icon -->
+      <img class="burger-menu"
+           [src]="isMenuOpen ? 'assets/img/xicon.png' : 'assets/img/burgermenue.png'"
+           alt="Menü umschalten"
+           (click)="toggleMenu()">
+    </div>
+  </div>
+</header>

@@ -4,6 +4,7 @@ import { SharedModule } from './shared/shared.module';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { MenuComponent } from './menu/menu.component';
 
 
 @Component({
@@ -15,6 +16,7 @@ import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-transl
     RouterOutlet, // RouterOutlet hier hinzufügen
     TranslatePipe,
     TranslateDirective,
+    MenuComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']  // Achte auf das "s"

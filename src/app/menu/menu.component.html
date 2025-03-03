@@ -1,4 +1,4 @@
-<div class="main">
+<!-- <div class="main">
     <div class="main-content">
         <div class="menu-page">
             <a (click)="closeMenu()" href="#about-me">{{ 'menu.aboutme' | translate }}</a>
@@ -6,4 +6,16 @@
             <a (click)="closeMenu()" href="#portfolio">{{ 'menu.portfolio' | translate }}</a>
           </div>                  
     </div>
+</div> -->
+
+
+<div class="menu-overlay" *ngIf="isMenuOpen">
+  <div class="menu-content">
+    <div class="menu-page">
+      <a (click)="navigateAndClose('#about-me')">{{ 'menu.aboutme' | translate }}</a>
+      <a (click)="navigateAndClose('#my-skills')">{{ 'menu.myskills' | translate }}</a>
+      <a (click)="navigateAndClose('#portfolio')">{{ 'menu.portfolio' | translate }}</a>
+    </div>
+    <app-footer class="menu-footer"></app-footer>
+  </div>
 </div>

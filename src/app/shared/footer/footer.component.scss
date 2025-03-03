@@ -3,6 +3,7 @@
   width: 100%;
   padding: 0;
   color: white;
+  z-index: 1001; 
 
   @media (min-width: 319px) and (max-width: 767px) {
     height: auto;
