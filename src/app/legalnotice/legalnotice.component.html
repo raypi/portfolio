@@ -1,14 +1,14 @@
 <div class="main" id="legal-notice">
   <div class="main-content legalnotice-page">
     <img src="assets/img/xicon.png" alt="{{ 'legalnotice.close' | translate }}" class="close-btn" (click)="toggleLegalNotice()">
-    <div>
+    <div class="notice">
         <h1>{{ 'legalnotice.title' | translate }}</h1>
         <p [innerHTML]="'legalnotice.address' | translate"></p>
         <p>{{ 'legalnotice.contact' | translate }}</p>
         <p [innerHTML]="'legalnotice.contactDetails' | translate"></p>
         <p [innerHTML]="'legalnotice.source' | translate"></p>
     </div>
-    <div>
+    <div class="notice">
       <h1>{{ 'legalnotice.title2' | translate }}</h1>
       <p [innerHTML]="'legalnotice.privacypolicy' | translate"></p>
     </div>

@@ -35,3 +35,11 @@
     cursor: pointer;
   }
   
+  @media (min-width: 318px) and (max-width: 767px) {
+    .legalnotice-page {
+      width: 260px;
+    }
+    .notice {
+      width: 225px;
+    }
+  }
