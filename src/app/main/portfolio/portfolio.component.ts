@@ -31,7 +31,7 @@ export class PortfolioComponent {
       projekt: 'portfolio.elPolloLoco.projekt',
       skills: ['JavaScript', 'HTML', 'CSS'],
       projectDescription: 'portfolio.elPolloLoco.projectDescription',
-      links: { live: 'http://rainer-musch.developerakademie.net/012_EPL/index.html', github: 'https://github.com/raypi/el_pollo_locco' },
+      links: { live: 'http://epl.developing-sailor.com/index.html', github: 'https://github.com/raypi/el_pollo_locco' },
       img: 'assets/img/projectelpolloloco.png'
     }
   ];

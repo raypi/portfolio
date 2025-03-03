@@ -11,7 +11,7 @@
   padding: 20px;
   margin-bottom: 100px;
   position: relative;
-  height: calc(100dvh - var(--headerHeight));
+  min-height: calc(100dvh - var(--headerHeight));
   position: relative;
   scroll-margin-top: calc(var(--headerHeight) + 120px);
   
